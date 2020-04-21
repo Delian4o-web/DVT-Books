@@ -1,3 +1,5 @@
+![CircleCI](https://img.shields.io/circleci/build/github/Delian4o-web/DVT-Books/master)
+
 # DVTBooks
 
 An Book Management application where users will be able to search for books , view books , and create , read , update and delete books. The application would also need to be responsive and also be translated to isiZulu or Afrikaans if needed. This application would also need to follow company corporate guideline.
