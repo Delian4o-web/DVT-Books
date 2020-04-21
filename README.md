@@ -12,8 +12,6 @@ An Book Management application where users will be able to search for books , vi
 
 - read and search for books.
 
----
-
 ## Functionality
 
 - [ ] Build components and services
@@ -28,7 +26,5 @@ An Book Management application where users will be able to search for books , vi
 - [ ] Server-side pagination
 - [ ] Loaded data & assets from cache when offline (PWA)
 - [ ] Docker in an Angular web application
-
----
 
 ## Screenshots
