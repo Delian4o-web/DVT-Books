@@ -44,3 +44,35 @@
     height: 50px;
   }
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container > div {
+  margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .jumbotron__title,
+  .jumbotron__tagline {
+    text-align: center;
+  }
+
+  img {
+    position: absolute;
+    left: 28%;
+    top: 18%;
+  }
+
+  .button {
+    position: absolute;
+    left: 30%;
+  }
+}
