@@ -23,6 +23,8 @@
           DVT's personal book library where you can find many programming books
         </p>
         <button
+          (click)="auth.login()"
+          *ngIf="!auth.loggedIn"
           i8n="button | Login Button@@appButton"
           class="button button__primary button__medium"
         >
