@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import createAuth0Client from "@auth0/auth0-spa-js";
-import Auth0Client from "@auth0/auth0-spa-js/dist/typings/Auth0Client";
+import { Injectable } from '@angular/core';
+import createAuth0Client from '@auth0/auth0-spa-js';
+import Auth0Client from '@auth0/auth0-spa-js/dist/typings/Auth0Client';
 import {
   from,
   of,
@@ -8,19 +8,19 @@ import {
   BehaviorSubject,
   combineLatest,
   throwError,
-} from "rxjs";
-import { tap, catchError, concatMap, shareReplay } from "rxjs/operators";
-import { Router } from "@angular/router";
+} from 'rxjs';
+import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class AuthService {
   // Create an observable of Auth0 instance of client
   auth0Client$ = (from(
     createAuth0Client({
-      domain: "delyan4o.auth0.com",
-      client_id: "pG4P6sbeE1z3cAjLwWfGJbvGGGNgIbvT",
+      domain: 'delyan4o.auth0.com',
+      client_id: 'pG4P6sbeE1z3cAjLwWfGJbvGGGNgIbvT',
       redirect_uri: `${window.location.origin}`,
     })
   ) as Observable<Auth0Client>).pipe(
@@ -78,7 +78,7 @@ export class AuthService {
     checkAuth$.subscribe();
   }
 
-  login(redirectPath: string = "/") {
+  login(redirectPath: string = '/') {
     // A desired redirect path can be passed to login method
     // (e.g., from a route guard)
     // Ensure Auth0 client instance exists
@@ -94,7 +94,7 @@ export class AuthService {
   private handleAuthCallback() {
     // Call when app reloads after user logs in with Auth0
     const params = window.location.search;
-    if (params.includes("code=") && params.includes("state=")) {
+    if (params.includes('code=') && params.includes('state=')) {
       let targetRoute: string; // Path to redirect to after login processsed
       const authComplete$ = this.handleRedirectCallback$.pipe(
         // Have client, now call method to handle auth callback redirect
@@ -103,7 +103,7 @@ export class AuthService {
           targetRoute =
             cbRes.appState && cbRes.appState.target
               ? cbRes.appState.target
-              : "/";
+              : '/';
         }),
         concatMap(() => {
           // Redirect callback complete; get user and login status
@@ -124,7 +124,7 @@ export class AuthService {
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
       client.logout({
-        client_id: "pG4P6sbeE1z3cAjLwWfGJbvGGGNgIbvT",
+        client_id: 'pG4P6sbeE1z3cAjLwWfGJbvGGGNgIbvT',
         returnTo: `${window.location.origin}`,
       });
     });
