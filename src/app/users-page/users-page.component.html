@@ -1,0 +1,13 @@
+<h3>User Page</h3>
+<button
+  (click)="auth.logout()"
+  *ngIf="auth.loggedIn"
+  class="button button__primary button__medium"
+>
+  Logout
+</button>
+
+<div *ngIf="auth.userProfile$ | async as profile">
+  <h3>Username : {{ profile.name }}</h3>
+  <img src="{{ profile.picture }}" alt="" />
+</div>
