@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import createAuth0Client from "@auth0/auth0-spa-js";
-import Auth0Client from "@auth0/auth0-spa-js/dist/typings/Auth0Client";
+import { Injectable } from '@angular/core';
+import createAuth0Client from '@auth0/auth0-spa-js';
+import Auth0Client from '@auth0/auth0-spa-js/dist/typings/Auth0Client';
 import {
   from,
   of,
@@ -8,13 +8,13 @@ import {
   BehaviorSubject,
   combineLatest,
   throwError,
-} from "rxjs";
-import { tap, catchError, concatMap, shareReplay } from "rxjs/operators";
-import { Router } from "@angular/router";
-import { environment } from "../../environments/environment";
+} from 'rxjs';
+import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class AuthService {
   auth0Client$ = (from(
@@ -64,7 +64,7 @@ export class AuthService {
     checkAuth$.subscribe();
   }
 
-  login(redirectPath: string = "/") {
+  login(redirectPath: string = '/') {
     this.auth0Client$.subscribe((client: Auth0Client) => {
       client.loginWithRedirect({
         redirect_uri: `${window.location.origin}`,
@@ -75,14 +75,14 @@ export class AuthService {
 
   private handleAuthCallback() {
     const params = window.location.search;
-    if (params.includes("code=") && params.includes("state=")) {
+    if (params.includes('code=') && params.includes('state=')) {
       let targetRoute: string;
       const authComplete$ = this.handleRedirectCallback$.pipe(
         tap((cbRes) => {
           targetRoute =
             cbRes.appState && cbRes.appState.target
               ? cbRes.appState.target
-              : "/";
+              : '/';
         }),
         concatMap(() => {
           return combineLatest([this.getUser$(), this.isAuthenticated$]);
@@ -98,7 +98,7 @@ export class AuthService {
     this.auth0Client$.subscribe((client: Auth0Client) => {
       client.logout({
         client_id: environment.client_id,
-        returnTo: "http://localhost:4200/home",
+        returnTo: 'http://localhost:4200/home',
       });
     });
   }

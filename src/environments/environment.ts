@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  domain: "delyan4o.auth0.com",
-  client_id: "pG4P6sbeE1z3cAjLwWfGJbvGGGNgIbvT",
+  domain: 'delyan4o.auth0.com',
+  client_id: 'pG4P6sbeE1z3cAjLwWfGJbvGGGNgIbvT',
 };
 
 /*
