@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { Observable, pipe } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { AuthorService } from '../services/author.service';
+import { Author } from '../models/author';
 
 @Component({
   selector: 'app-users-page',
@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./users-page.component.scss'],
 })
 export class UsersPageComponent implements OnInit {
+  author: Author;
   constructor(public auth: AuthService) {}
 
   ngOnInit(): void {}
