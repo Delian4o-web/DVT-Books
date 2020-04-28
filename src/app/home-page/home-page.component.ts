@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { AuthorService } from '../services/author.service';
+import { Author } from '../models/author';
 
 @Component({
   selector: 'app-home-page',
