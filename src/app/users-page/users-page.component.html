@@ -1,11 +1,7 @@
-<h3>User Page</h3>
-<button
-  (click)="auth.logout()"
-  *ngIf="auth.loggedIn"
-  class="button button__primary button__medium"
->
-  Logout
-</button>
+<app-header></app-header>
+
+
+<!-- <h3>User Page</h3>
 
 <div *ngIf="auth.userProfile$ | async as profile">
   <h3>Username : {{ profile.name }}</h3>
@@ -14,4 +10,4 @@
 
 <pre *ngIf="auth.userProfile$ | async as profile">
   <code>{{ profile | json }}</code>
-  </pre>
+  </pre> -->
