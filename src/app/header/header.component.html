@@ -1,0 +1,25 @@
+<nav>
+  <a href="http://localhost:4200/profile" target="_blank" class="logo">
+    <img
+      src="https://avatars3.githubusercontent.com/u/3303186?s=280&v=4"
+      alt="logo"
+    />
+  </a>
+  <ul class="menu">
+    <li class="menu-item">
+      <a href="#home" class="active" style="color: #6f6f6f;">Authors</a>
+    </li>
+    <li class="menu-item">
+      <a href="#">Books</a>
+    </li>
+    <li class="menu-item">
+      <a href="#">Tags</a>
+    </li>
+    <li class="menu-item">
+      <a href="http://localhost:4200/home" onclick="auth.logout">Logout</a>
+      <button (click)="auth.logout()">
+        Logout
+      </button>
+    </li>
+  </ul>
+</nav>
