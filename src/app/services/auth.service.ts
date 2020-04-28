@@ -12,6 +12,7 @@ import {
 import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { UserProfile } from '../models/userprofile';
 
 @Injectable({
   providedIn: 'root',
@@ -39,6 +40,8 @@ export class AuthService {
   private userProfileSubject$ = new BehaviorSubject<any>(null);
   userProfile$ = this.userProfileSubject$.asObservable();
   loggedIn: boolean = null;
+  userProfileData: UserProfile = null;
+  userRole = '';
 
   constructor(private router: Router) {
     this.localAuthSetup();
@@ -48,7 +51,15 @@ export class AuthService {
   getUser$(options?): Observable<any> {
     return this.auth0Client$.pipe(
       concatMap((client: Auth0Client) => from(client.getUser(options))),
-      tap((user) => this.userProfileSubject$.next(user))
+      tap((user) => {
+        this.userProfileSubject$.next(user), (this.userProfileData = user);
+
+        if (this.userProfileData[environment.nameSpace].includes('Admin')) {
+          this.userRole = 'Admin';
+        } else {
+          this.userRole = 'User';
+        }
+      })
     );
   }
 
