@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  domain: 'delyan4o.auth0.com',
+  client_id: 'pG4P6sbeE1z3cAjLwWfGJbvGGGNgIbvT',
+  apiUri: 'http://localhost:4201',
 };
 
 /*

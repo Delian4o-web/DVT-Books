@@ -1,0 +1,36 @@
+<section class="jumbotron">
+  <div class="jumbotron__contents">
+    <div class="flex-container">
+      <div>
+        <img
+          src="https://avatars3.githubusercontent.com/u/3303186?s=280&v=4"
+          alt="DVT Logo"
+          class="img-responsive"
+          style="width: 200px; height: 200px;"
+        />
+      </div>
+      <div>
+        <h2
+          i8n="site title | Title for the application@@appTitle"
+          class="jumbotron__title"
+        >
+          DVT Books
+        </h2>
+        <p
+          i8n="site description | Description for the application@@appDescription"
+          class="jumbotron__tagline"
+        >
+          DVT's personal book library where you can find many programming books
+        </p>
+        <button
+          (click)="auth.login()"
+          *ngIf="!auth.loggedIn"
+          i8n="button | Login Button@@appButton"
+          class="button button__primary button__medium"
+        >
+          Take me to login
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
