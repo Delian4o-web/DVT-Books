@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { AuthorService } from '../services/author.service';
 import { Author } from '../models/author';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-users-page',
@@ -9,8 +10,13 @@ import { Author } from '../models/author';
   styleUrls: ['./users-page.component.scss'],
 })
 export class UsersPageComponent implements OnInit {
-  author: Author;
-  constructor(public auth: AuthService) {}
+  author: Author[];
+  userRole = '';
+  constructor(public auth: AuthService, private authorService: AuthorService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.authorService.getAllAuthors().subscribe((x) => {
+      this.author = x;
+    });
+  }
 }
