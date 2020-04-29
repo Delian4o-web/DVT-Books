@@ -1,0 +1,41 @@
+@import '../../../variables';
+
+ul {
+  justify-content: center;
+}
+
+.card {
+  border-color: white;
+}
+
+input,
+textarea,
+select {
+  border-color: $blue;
+}
+
+button {
+  width: 100%;
+  color: white;
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.btnShow {
+  width: 50%;
+}
+
+select {
+  width: 60%;
+}
+
+.selectMenu {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .selectMenu {
+    flex-direction: column;
+  }
+}
