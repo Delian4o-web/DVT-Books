@@ -24,4 +24,11 @@ export class AuthorService {
       .post<Author>(`${environment.apiUri}/Authors`, author)
       .pipe(tap((data) => console.log('Author added :' + data)));
   }
+
+  updateAuthor(author: Author, authorID: string): Observable<Author> {
+    return this.http.patch<Author>(
+      `${environment.apiUri}/Authors/${authorID}`,
+      author
+    );
+  }
 }
