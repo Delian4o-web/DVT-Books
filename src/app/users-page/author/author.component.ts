@@ -14,6 +14,7 @@ export class AuthorComponent implements OnInit {
   submitted = false;
   author = new Author();
   authorsList: Author[];
+  updateAuthor: Author;
   selectedGroup: any;
   chosenAuthor: Author;
   authorID;
@@ -64,6 +65,16 @@ export class AuthorComponent implements OnInit {
     this.authorService.addAuthor(this.author).subscribe();
   }
 
+  updateAnAuthor() {
+    this.updateAuthor = new Author();
+    this.updateAuthor = this.updateAuthorForm.value;
+    this.authorService
+      .updateAuthor(this.updateAuthor, this.selectedGroup.id)
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
+
   onSubmit() {
     this.submitted = true;
     if (this.registerAuthorForm.valid) {
@@ -72,5 +83,11 @@ export class AuthorComponent implements OnInit {
     }
   }
 
-  onUpdate() {}
+  onUpdate() {
+    this.submitted = true;
+    if (this.updateAuthorForm.valid) {
+      this.updateAnAuthor();
+      alert('Updated!');
+    }
+  }
 }
