@@ -1,17 +1,5 @@
-<app-header></app-header>
+<app-header></app-header><br /><br /><br />
 
-<h3>User Page</h3>
+<app-welcome-page></app-welcome-page>
 
-<div *ngIf="auth.userProfile$ | async as profile">
-  <h3>Username : {{ profile.name }}</h3>
-  <img src="{{ profile.picture }}" alt="" /><br />
-  <h3>{{ auth.userRole }}</h3>
-</div>
-
-<div *ngIf="auth.userRole == 'Admin'">
-  <h1>User is an Admin</h1>
-</div>
-
-<div *ngIf="auth.userRole == 'User'">
-  <h1>User logged in</h1>
-</div>
+<app-author></app-author>
