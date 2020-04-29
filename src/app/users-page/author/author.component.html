@@ -250,6 +250,27 @@
     role="tabpanel"
     aria-labelledby="pills-view-tab"
   >
-    View Author
+    <div class="container table-responsive py-5">
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Author ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">About</th>
+            <th scope="col">Books Written</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let author of authorsList; let i = index">
+            <th scope="row">{{ author.id }}</th>
+            <td>{{ author.name }}</td>
+            <td>{{ author.about }}</td>
+            <td>{{ author.books }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
+
+<!-- *ngFor="let author of authorsList" -->
