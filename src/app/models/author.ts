@@ -3,9 +3,9 @@ import { Book } from './book';
 export class Author {
   href: string;
   id: string;
-  firstName: string;
-  middleNames: string;
-  lastName: string;
+  first_name: string;
+  middle_names: string;
+  last_name: string;
   name: string;
   about: string;
   version: string;
