@@ -42,6 +42,7 @@ export class AuthService {
   loggedIn: boolean = null;
   userProfileData: UserProfile = null;
   userRole = '';
+  isAdmin: boolean;
 
   constructor(private router: Router) {
     this.localAuthSetup();
@@ -55,8 +56,10 @@ export class AuthService {
         this.userProfileSubject$.next(user), (this.userProfileData = user);
 
         if (this.userProfileData[environment.nameSpace].includes('Admin')) {
+          this.isAdmin = true;
           this.userRole = 'Admin';
         } else {
+          this.isAdmin = false;
           this.userRole = 'User';
         }
       })
