@@ -26,7 +26,7 @@ export class AuthorService {
   }
 
   updateAuthor(author: Author, authorID: string): Observable<Author> {
-    return this.http.patch<Author>(
+    return this.http.put<Author>(
       `${environment.apiUri}/Authors/${authorID}`,
       author
     );
