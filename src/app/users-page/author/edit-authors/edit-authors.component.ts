@@ -63,6 +63,7 @@ export class EditAuthorsComponent implements OnInit {
     if (this.updateAuthorForm.valid) {
       this.updateAnAuthor();
       alert('Updated!');
+      window.location.reload();
     }
   }
 }

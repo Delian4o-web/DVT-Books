@@ -47,6 +47,7 @@ export class AddAuthorsComponent implements OnInit {
     if (this.registerAuthorForm.valid) {
       this.addAuthor();
       alert('Author Added!');
+      window.location.reload();
     }
   }
 }
