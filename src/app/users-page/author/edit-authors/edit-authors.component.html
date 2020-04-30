@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <div class="selectMenu">
+            <select class="form-control" [(ngModel)]="selectedGroup">
+              <option *ngFor="let author of authorsList" [ngValue]="author">{{
+                author.name
+              }}</option>
+            </select>
+            <button class="btnShow" (click)="getVal()">
+              View
+            </button>
+          </div>
+          <br />
+
+          <div *ngIf="chosenAuthor">
+            <form
+              class="form"
+              [formGroup]="updateAuthorForm"
+              (ngSubmit)="onUpdate()"
+            >
+              <div class="form-group">
+                <label>Firstname : <b class="text-error">*</b></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="first_name"
+                  placeholder="{{ chosenAuthor.first_name }}"
+                />
+                <span
+                  class="text-danger"
+                  *ngIf="
+                    (registerUpdateFormControl.first_name.touched ||
+                      submitted) &&
+                    registerUpdateFormControl.first_name.errors?.required
+                  "
+                >
+                  Firstname is required!
+                </span>
+              </div>
+              <div class="form-group">
+                <label>Middlename :</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="middle_names"
+                  placeholder="{{ chosenAuthor.middle_names }}"
+                />
+              </div>
+              <div class="form-group">
+                <label>Lastname : <b class="text-error">*</b></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="last_name"
+                  placeholder="{{ chosenAuthor.last_name }}"
+                />
+                <span
+                  class="text-danger"
+                  *ngIf="
+                    (registerUpdateFormControl.last_name.touched ||
+                      submitted) &&
+                    registerUpdateFormControl.last_name.errors?.required
+                  "
+                >
+                  Lastname is required!
+                </span>
+              </div>
+              <div class="form-group">
+                <label>About the Author :</label>
+                <textarea
+                  class="form-control"
+                  formControlName="about"
+                  rows="6"
+                  placeholder="{{ chosenAuthor.about }}"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button
+                  [disabled]="!updateAuthorForm.valid"
+                  type="submit"
+                  class="btn"
+                >
+                  Update Author
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,6 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthorComponent } from './users-page/author/author.component';
 import { WelcomePageComponent } from './users-page/welcome-page/welcome-page.component';
 import { TestComponent } from './test/test.component';
+import { ViewAuthorsComponent } from './users-page/author/view-authors/view-authors.component';
+import { EditAuthorsComponent } from './users-page/author/edit-authors/edit-authors.component';
+import { AddAuthorsComponent } from './users-page/author/add-authors/add-authors.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { TestComponent } from './test/test.component';
     AuthorComponent,
     WelcomePageComponent,
     TestComponent,
+    ViewAuthorsComponent,
+    EditAuthorsComponent,
+    AddAuthorsComponent,
   ],
   imports: [
     BrowserModule,

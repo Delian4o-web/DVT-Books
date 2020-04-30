@@ -50,6 +50,7 @@
     >
   </li>
 </ul>
+<br />
 
 <div class="tab-content" id="pills-tabContent">
   <div
@@ -58,81 +59,7 @@
     role="tabpanel"
     aria-labelledby="pills-add-tab"
   >
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <div class="card">
-            <div class="card-body">
-              <form
-                class="form"
-                [formGroup]="registerAuthorForm"
-                (ngSubmit)="onSubmit()"
-              >
-                <div class="form-group">
-                  <label>Firstname : <b class="text-error">*</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="first_name"
-                  />
-                  <span
-                    class="text-danger"
-                    *ngIf="
-                      (registerFormControl.first_name.touched || submitted) &&
-                      registerFormControl.first_name.errors?.required
-                    "
-                  >
-                    Firstname is required!
-                  </span>
-                </div>
-                <div class="form-group">
-                  <label>Middlename :</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="middle_names"
-                  />
-                </div>
-                <div class="form-group">
-                  <label>Lastname : <b class="text-error">*</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="last_name"
-                  />
-                  <span
-                    class="text-danger"
-                    *ngIf="
-                      (registerFormControl.last_name.touched || submitted) &&
-                      registerFormControl.last_name.errors?.required
-                    "
-                  >
-                    Lastname is required!
-                  </span>
-                </div>
-                <div class="form-group">
-                  <label>About the Author :</label>
-                  <textarea
-                    class="form-control"
-                    formControlName="about"
-                    rows="6"
-                  ></textarea>
-                </div>
-                <div class="form-group">
-                  <button
-                    [disabled]="!registerAuthorForm.valid"
-                    type="submit"
-                    class="btn"
-                  >
-                    Add Author
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-add-authors></app-add-authors>
   </div>
   <div
     class="tab-pane fade"
@@ -140,103 +67,7 @@
     role="tabpanel"
     aria-labelledby="pills-update-tab"
   >
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <div class="card">
-            <div class="card-body">
-              <div class="selectMenu">
-                <select class="form-control" [(ngModel)]="selectedGroup">
-                  <option
-                    *ngFor="let author of authorsList"
-                    [ngValue]="author"
-                    >{{ author.name }}</option
-                  >
-                </select>
-                <button class="btnShow" (click)="getVal()">
-                  View
-                </button>
-              </div>
-              <br />
-
-              <div *ngIf="chosenAuthor">
-                <form
-                  class="form"
-                  [formGroup]="updateAuthorForm"
-                  (ngSubmit)="onUpdate()"
-                >
-                  <div class="form-group">
-                    <label>Firstname : <b class="text-error">*</b></label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      formControlName="first_name"
-                      placeholder="{{ chosenAuthor.first_name }}"
-                    />
-                    <span
-                      class="text-danger"
-                      *ngIf="
-                        (registerUpdateFormControl.first_name.touched ||
-                          submitted) &&
-                        registerUpdateFormControl.first_name.errors?.required
-                      "
-                    >
-                      Firstname is required!
-                    </span>
-                  </div>
-                  <div class="form-group">
-                    <label>Middlename :</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      formControlName="middle_names"
-                      placeholder="{{ chosenAuthor.middle_names }}"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Lastname : <b class="text-error">*</b></label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      formControlName="last_name"
-                      placeholder="{{ chosenAuthor.last_name }}"
-                    />
-                    <span
-                      class="text-danger"
-                      *ngIf="
-                        (registerUpdateFormControl.last_name.touched ||
-                          submitted) &&
-                        registerUpdateFormControl.last_name.errors?.required
-                      "
-                    >
-                      Lastname is required!
-                    </span>
-                  </div>
-                  <div class="form-group">
-                    <label>About the Author :</label>
-                    <textarea
-                      class="form-control"
-                      formControlName="about"
-                      rows="6"
-                      placeholder="{{ chosenAuthor.about }}"
-                    ></textarea>
-                  </div>
-                  <div class="form-group">
-                    <button
-                      [disabled]="!updateAuthorForm.valid"
-                      type="submit"
-                      class="btn"
-                    >
-                      Update Author
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-edit-authors></app-edit-authors>
   </div>
   <div
     class="tab-pane fade"
@@ -252,23 +83,6 @@
     role="tabpanel"
     aria-labelledby="pills-view-tab"
   >
-    <div class="container">
-      <main class="grid">
-        <article *ngFor="let author of authorsList">
-          <img
-            class="img-fluid"
-            src="https://www.pngitem.com/pimgs/m/35-350426_profile-icon-png-default-profile-picture-png-transparent.png"
-            alt="Sample photo"
-          />
-          <div class="text">
-            <h4>{{ author.first_name }} {{ author.last_name }}</h4>
-            <hr />
-            <p class="card-text font-weight-light">
-              {{ author.about }}
-            </p>
-          </div>
-        </article>
-      </main>
-    </div>
+    <app-view-authors></app-view-authors>
   </div>
 </div>
