@@ -53,10 +53,10 @@ describe('AuthorService : API Requests', () => {
 
   it('addAuthor() should create and send a new author to the server and return it', () => {
     const author = new Author();
-    author.first_name = 'John';
-    author.middle_names = 'Jones';
-    author.last_name = 'Smith';
-    author.about = 'John Jones Smith is an American Programming expert.';
+    author.first_name = singleAuthorMock.first_name;
+    author.middle_names = singleAuthorMock.middle_names;
+    author.last_name = singleAuthorMock.last_name;
+    author.about = singleAuthorMock.about;
 
     service.addAuthor(author).subscribe();
 
@@ -66,12 +66,34 @@ describe('AuthorService : API Requests', () => {
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual(author);
 
-    //RETURN
     const expectedResponse = new HttpResponse({
       status: 201,
       statusText: 'Created',
       body: author,
     });
     req.event(expectedResponse);
+  });
+
+  it('updateAuthor() should update an author correctly', () => {
+    const author = new Author();
+    author.first_name = singleAuthorMock.first_name;
+    author.middle_names = singleAuthorMock.middle_names;
+    author.last_name = singleAuthorMock.last_name;
+    author.about = singleAuthorMock.about;
+
+    const updatedAuthor = new Author();
+    author.first_name = 'Peter';
+    author.middle_names = 'Stevenson';
+    author.last_name = singleAuthorMock.last_name;
+    author.about = singleAuthorMock.about;
+
+    service.updateAuthor(updatedAuthor, singleAuthorMock.id).subscribe();
+    const req = httpMock.expectOne(
+      `${environment.apiUri}/Authors/${singleAuthorMock.id}`
+    );
+
+    httpMock.verify();
+    expect(req.request.method).toBe('PUT');
+    expect(req.request.body).toEqual(updatedAuthor);
   });
 });
