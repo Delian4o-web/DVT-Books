@@ -32,6 +32,7 @@ import { AddAuthorsComponent } from './users-page/author/add-authors/add-authors
     AddAuthorsComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
@@ -39,7 +40,6 @@ import { AddAuthorsComponent } from './users-page/author/add-authors/add-authors
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
-    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
