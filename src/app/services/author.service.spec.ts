@@ -6,6 +6,8 @@ import {
 import { AuthorService } from './author.service';
 import { singleAuthorMock, authorsMock } from '../utils/mockdata';
 import { environment } from 'src/environments/environment';
+import { Author } from '../models/author';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 
 describe('AuthorService : API Requests', () => {
   let injector: TestBed;
@@ -47,5 +49,29 @@ describe('AuthorService : API Requests', () => {
     const req = httpMock.expectOne(`${environment.apiUri}/Authors`);
     expect(req.request.method).toBe('GET');
     req.flush(authorsMock);
+  });
+
+  it('addAuthor() should create and send a new author to the server and return it', () => {
+    const author = new Author();
+    author.first_name = 'John';
+    author.middle_names = 'Jones';
+    author.last_name = 'Smith';
+    author.about = 'John Jones Smith is an American Programming expert.';
+
+    service.addAuthor(author).subscribe();
+
+    const req = httpMock.expectOne(`${environment.apiUri}/Authors`);
+
+    httpMock.verify();
+    expect(req.request.method).toBe('POST');
+    expect(req.request.body).toEqual(author);
+
+    //RETURN
+    const expectedResponse = new HttpResponse({
+      status: 201,
+      statusText: 'Created',
+      body: author,
+    });
+    req.event(expectedResponse);
   });
 });
