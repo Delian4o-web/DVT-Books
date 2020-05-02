@@ -34,10 +34,10 @@ describe('AddAuthorsComponent', () => {
 
   it('form invalid when empty', () => {
     const firstNameInput = authorComponent.registerFormControl.first_name;
-    firstNameInput.setValue('');
+    // firstNameInput.setValue('Delyan');
 
     const lastNameInput = authorComponent.registerFormControl.last_name;
-    lastNameInput.setValue('');
+    // lastNameInput.setValue('Georgiev');
 
     expect(authorComponent.registerAuthorForm.valid).toBeFalsy();
   });
