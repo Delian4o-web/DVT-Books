@@ -9,7 +9,6 @@ import { BookService } from 'src/app/services/book.service';
 import { Book } from 'src/app/models/book';
 import { AuthorService } from 'src/app/services/author.service';
 import { Author } from 'src/app/models/author';
-import { IsbnvalidationService } from 'src/app/services/isbnvalidation.service';
 import { TagService } from 'src/app/services/tag.service';
 import { Tag } from 'src/app/models/tag';
 
