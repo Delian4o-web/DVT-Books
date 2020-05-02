@@ -32,15 +32,15 @@ describe('AddAuthorsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('form valid when input is entered', () => {
-    const firstNameInput = authorComponent.registerFormControl.first_name;
-    firstNameInput.setValue('Delyan');
+  // it('form valid when input is entered', () => {
+  //   const firstNameInput = authorComponent.registerFormControl.first_name;
+  //   firstNameInput.setValue('Delyan');
 
-    const lastNameInput = authorComponent.registerFormControl.last_name;
-    lastNameInput.setValue('Georgiev');
+  //   const lastNameInput = authorComponent.registerFormControl.last_name;
+  //   lastNameInput.setValue('Georgiev');
 
-    expect(authorComponent.registerAuthorForm.valid).toBeTruthy();
-  });
+  //   expect(authorComponent.registerAuthorForm.valid).toBeTruthy();
+  // });
 
   // it('should test input errors', () => {
   //   const firstNameInput = authorComponent.registerFormControl.first_name;
