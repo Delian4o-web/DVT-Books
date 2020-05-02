@@ -6,7 +6,7 @@ export const singleAuthorMock = {
   last_name: 'Patterson',
   name: 'James  David Patterson',
   about:
-    "Patterson is frequently thought to be the best-selling author in the world today, and has been since 2001. He's also credited as the first author to sell 1 million e-books, and is generally listed as the author with the most New York Times bestsellers.,",
+    'Patterson is frequently thought to be the best-selling author in the world today, and has been since 2001',
   version: 'AAAAAAAAF3E=',
   books: [],
 };
@@ -20,7 +20,7 @@ export const authorsMock = [
     last_name: 'Patterson',
     name: 'James  David Patterson',
     about:
-      "Patterson is frequently thought to be the best-selling author in the world today, and has been since 2001. He's also credited as the first author to sell 1 million e-books, and is generally listed as the author with the most New York Times bestsellers.,",
+      'Patterson is frequently thought to be the best-selling author in the world today, and has been since 2001',
     version: 'AAAAAAAAF3E=',
     books: [],
   },
