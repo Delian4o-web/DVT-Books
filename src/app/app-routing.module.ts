@@ -4,7 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { UsersPageComponent } from './users-page/users-page.component';
 import { TestComponent } from './test/test.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'test', component: TestComponent },
   { path: 'profile', component: UsersPageComponent },

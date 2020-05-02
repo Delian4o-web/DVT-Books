@@ -7,3 +7,11 @@ ul {
 .card {
   border-color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .nav-pills {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -23,3 +23,9 @@
 .grid .text {
   padding: 20px;
 }
+
+.card:hover {
+  top: -6px;
+  left: -4px;
+  box-shadow: 6px 6px 15px 0px rgba(82, 82, 82, 0.85);
+}
