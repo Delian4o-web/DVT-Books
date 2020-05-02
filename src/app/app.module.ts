@@ -17,6 +17,10 @@ import { TestComponent } from './test/test.component';
 import { ViewAuthorsComponent } from './users-page/author/view-authors/view-authors.component';
 import { EditAuthorsComponent } from './users-page/author/edit-authors/edit-authors.component';
 import { AddAuthorsComponent } from './users-page/author/add-authors/add-authors.component';
+import { BookComponent } from './users-page/book/book.component';
+import { AddBooksComponent } from './users-page/book/add-books/add-books.component';
+import { EditBooksComponent } from './users-page/book/edit-books/edit-books.component';
+import { ViewBooksComponent } from './users-page/book/view-books/view-books.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { AddAuthorsComponent } from './users-page/author/add-authors/add-authors
     ViewAuthorsComponent,
     EditAuthorsComponent,
     AddAuthorsComponent,
+    BookComponent,
+    AddBooksComponent,
+    EditBooksComponent,
+    ViewBooksComponent,
   ],
   imports: [
     HttpClientModule,
