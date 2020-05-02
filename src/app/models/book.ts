@@ -1,16 +1,15 @@
 import { Tag } from './tag';
 import { Author } from './author';
-
+// tslint:disable:variable-name
 export class Book {
-  isbN10: string;
-  isbN13: string;
+  isbn10: string;
+  isbn13: string;
   title: string;
   about: string;
   abstract: string;
-  author: Author[];
+  author: { href: string; id: string; name: string };
   publisher: string;
-  datePublished: Date;
+  date_published: Date;
   image: string;
   tags: Tag[];
-  version: string;
 }
