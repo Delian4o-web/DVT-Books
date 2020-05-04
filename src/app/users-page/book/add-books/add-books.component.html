@@ -16,6 +16,8 @@
                     type="text"
                     class="form-control"
                     formControlName="isbn10"
+                    maxlength="13"
+                    maxlength="13"
                   />
 
                   <span
@@ -129,19 +131,9 @@
                 </div>
                 <br />
 
-                <div class="form-group">
-                  <label>Select an Image </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="image"
-                  />
-                </div>
-                <br />
-
-                <div class="form-group">
+                <div class="form-group tags-show">
                   <label>Tags </label>
-                  <ng-select
+                  <!-- <ng-select
                     [multiple]="true"
                     class="tags-view"
                     formControlName="tags"
@@ -149,7 +141,12 @@
                     <ng-option *ngFor="let tag of tagsList" [value]="tag.id">{{
                       tag.description
                     }}</ng-option>
-                  </ng-select>
+                  </ng-select> -->
+                  <select class="form-control" formControlName="tags">
+                    <option *ngFor="let tag of tagsList" [value]="tag.id">{{
+                      tag.description
+                    }}</option>
+                  </select>
                 </div>
                 <br />
 
@@ -158,7 +155,7 @@
                   <textarea
                     class="form-control"
                     formControlName="about"
-                    rows="6"
+                    rows="11"
                   ></textarea>
                 </div>
                 <br />
@@ -171,6 +168,28 @@
                 >
                   Add Author
                 </button>
+                <hr />
+                <br />
+                <div class="uploadImageMenu">
+                  <label>Upload an image </label>
+                  <input
+                    style="display: none;"
+                    type="file"
+                    (change)="onFileChanged($event)"
+                    accept="image/bmp,image/gif,image/jpeg,image/png"
+                    autocomplete="none"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    class="form-control"
+                    formControlName="image"
+                    #fileInput
+                  />
+                  <button (click)="fileInput.click()" class="btn">
+                    Select File
+                  </button>
+                </div>
+                <br />
               </div>
             </div>
           </form>
