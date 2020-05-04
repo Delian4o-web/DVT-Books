@@ -1,0 +1,22 @@
+@import '../../../../variables';
+
+.card {
+  border-color: white;
+}
+
+input,
+textarea,
+select {
+  border-color: $blue;
+}
+
+button {
+  width: 100%;
+  color: white;
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.btnShow {
+  width: 50%;
+}

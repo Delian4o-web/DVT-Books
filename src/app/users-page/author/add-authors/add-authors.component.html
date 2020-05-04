@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <form
+              class="form"
+              [formGroup]="registerAuthorForm"
+              (ngSubmit)="onSubmit()"
+            >
+              <div class="form-group">
+                <label>Firstname : <b class="text-error">*</b></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="first_name"
+                />
+                <span
+                  class="text-danger"
+                  *ngIf="
+                    (registerFormControl.first_name.touched || submitted) &&
+                    registerFormControl.first_name.errors?.required
+                  "
+                >
+                  Firstname is required!
+                </span>
+              </div>
+              <div class="form-group">
+                <label>Middlename :</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="middle_names"
+                />
+              </div>
+              <div class="form-group">
+                <label>Lastname : <b class="text-error">*</b></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="last_name"
+                />
+                <span
+                  class="text-danger"
+                  *ngIf="
+                    (registerFormControl.last_name.touched || submitted) &&
+                    registerFormControl.last_name.errors?.required
+                  "
+                >
+                  Lastname is required!
+                </span>
+              </div>
+              <div class="form-group">
+                <label>About the Author :</label>
+                <textarea
+                  class="form-control"
+                  formControlName="about"
+                  rows="6"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button
+                  [disabled]="!registerAuthorForm.valid"
+                  type="submit"
+                  class="btn"
+                >
+                  Add Author
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

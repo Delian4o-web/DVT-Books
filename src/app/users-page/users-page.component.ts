@@ -10,13 +10,5 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./users-page.component.scss'],
 })
 export class UsersPageComponent implements OnInit {
-  author: Author[];
-  userRole = '';
-  constructor(public auth: AuthService, private authorService: AuthorService) {}
-
-  ngOnInit(): void {
-    this.authorService.getAllAuthors().subscribe((x) => {
-      this.author = x;
-    });
-  }
+  ngOnInit(): void {}
 }
