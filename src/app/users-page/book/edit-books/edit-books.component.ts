@@ -26,6 +26,7 @@ export class EditBooksComponent implements OnInit {
   booksList: Book[];
   chosenBook: Book;
   selectedISBNNo: string;
+  bookInfoUpdate: Book;
 
   constructor(
     private fb: FormBuilder,
@@ -36,16 +37,8 @@ export class EditBooksComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateBookForm = this.fb.group({
-      isbn10: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
-      isbn13: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern(
-            '[0-9]*[-| ][0-9]*[-| ][0-9]*[-| ][0-9]*[-| ][0-9]*'
-          ),
-        ],
-      ],
+      isbn10: ['', [Validators.required]], // Validators.pattern('^[0-9]{10}$')
+      isbn13: ['', [Validators.required]], // Validators.pattern('[0-9]*[-| ][0-9]*[-| ][0-9]*[-| ][0-9]*[-| ][0-9]*'),
       title: ['', [Validators.required]],
       about: [''],
       abstract: [''],
@@ -90,10 +83,17 @@ export class EditBooksComponent implements OnInit {
   }
 
   updateBook() {
-    // this.book = this.updateBookForm.value;
-    // this.book.author = this.authorsList.find((x) => x.id === this.author.value);
-    // this.book.tags = this.tagsList.filter((x) => x.id === this.tags.value);
-    // this.bookService.addBook(this.book).subscribe();
+    this.bookInfoUpdate = this.updateBookForm.value;
+    this.bookInfoUpdate.author = this.authorsList.find(
+      (x) => x.id === this.author.value
+    );
+    this.bookInfoUpdate.tags = this.tagsList.filter(
+      (x) => x.id === this.tags.value
+    );
+
+    this.bookService
+      .updateBook(this.selectedISBNNo, this.bookInfoUpdate)
+      .subscribe();
   }
 
   onSubmit() {
