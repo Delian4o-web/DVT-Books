@@ -1,1 +1,208 @@
-<p>edit-books works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <div class="selectMenu">
+            <label>Select a Book :</label>
+            <select
+              (click)="getBook()"
+              class="form-control"
+              [(ngModel)]="selectedGroup"
+            >
+              <option *ngFor="let books of booksList" [ngValue]="books">{{
+                books.title
+              }}</option>
+            </select>
+          </div>
+          <hr />
+          <br />
+
+          <div *ngIf="chosenBook">
+            <form
+              class="form"
+              [formGroup]="updateBookForm"
+              (ngSubmit)="onSubmit()"
+            >
+              <div class="parent">
+                <div class="div1">
+                  <div class="form-group">
+                    <label>ISBN10 Number <b class="text-error">*</b> </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="isbn10"
+                      placeholder="{{ chosenBook.isbn10 }}"
+                    />
+
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        (registerFormControl.isbn10.touched || submitted) &&
+                        registerFormControl.isbn10.errors?.required
+                      "
+                    >
+                      ISBN-10 number is required!
+                    </span>
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        registerFormControl.isbn10.touched &&
+                        registerFormControl.isbn10.errors?.pattern
+                      "
+                    >
+                      Enter a valid ISBN-10 number!
+                    </span>
+                  </div>
+                  <br />
+
+                  <div class="form-group">
+                    <label>ISBN 13 Number <b class="text-error">*</b> </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="isbn13"
+                      placeholder="{{ chosenBook.isbn13 }}"
+                    />
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        (registerFormControl.isbn13.touched || submitted) &&
+                        registerFormControl.isbn13.errors?.required
+                      "
+                    >
+                      ISBN-13 number is required!
+                    </span>
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        registerFormControl.isbn13.touched &&
+                        registerFormControl.isbn13.errors?.pattern
+                      "
+                    >
+                      Enter a valid ISBN-13 number!
+                    </span>
+                  </div>
+                  <br />
+
+                  <div class="form-group">
+                    <label>Title <b class="text-error">*</b> </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="title"
+                      placeholder="{{ chosenBook.title }}"
+                    />
+                    <span
+                      class="text-danger"
+                      *ngIf="
+                        (registerFormControl.title.touched || submitted) &&
+                        registerFormControl.title.errors?.required
+                      "
+                    >
+                      Title of the book is required!
+                    </span>
+                  </div>
+                  <br />
+
+                  <div class="form-group">
+                    <label>Author </label>
+                    <select class="form-control" formControlName="author">
+                      <option
+                        selected="selected"
+                        value="{{ chosenBook.author.id }}"
+                        >{{ chosenBook.author.name }}</option
+                      >
+                      <option
+                        *ngFor="let author of authorsList"
+                        [value]="author.id"
+                        >{{ author.name }}</option
+                      >
+                    </select>
+                  </div>
+                  <br />
+
+                  <div class="form-group">
+                    <label>Abstract </label>
+                    <textarea
+                      class="form-control"
+                      formControlName="about"
+                      rows="6"
+                    ></textarea>
+                  </div>
+                  <br />
+                </div>
+                <div class="div2">
+                  <div class="form-group">
+                    <label>Publisher </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="publisher"
+                    />
+                  </div>
+                  <br />
+
+                  <div class="form-group">
+                    <label>Date Published </label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      formControlName="date_published"
+                    />
+                  </div>
+                  <br />
+
+                  <div class="form-group">
+                    <label>Select an Image </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="image"
+                    />
+                  </div>
+                  <br />
+
+                  <div class="form-group">
+                    <label>Tags </label>
+                    <ng-select
+                      [multiple]="true"
+                      class="tags-view"
+                      formControlName="tags"
+                    >
+                      <ng-option
+                        *ngFor="let tag of tagsList"
+                        [value]="tag.id"
+                        >{{ tag.description }}</ng-option
+                      >
+                    </ng-select>
+                  </div>
+                  <br />
+
+                  <div class="form-group">
+                    <label>About </label>
+                    <textarea
+                      class="form-control"
+                      formControlName="about"
+                      rows="6"
+                    ></textarea>
+                  </div>
+                  <br />
+                </div>
+                <div class="div3">
+                  <button
+                    [disabled]="!updateBookForm.valid"
+                    type="submit"
+                    class="btn"
+                  >
+                    Add Author
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
