@@ -22,6 +22,8 @@ import { BookComponent } from './users-page/book/book.component';
 import { AddBooksComponent } from './users-page/book/add-books/add-books.component';
 import { EditBooksComponent } from './users-page/book/edit-books/edit-books.component';
 import { ViewBooksComponent } from './users-page/book/view-books/view-books.component';
+import { BookProfileComponent } from './book-profile/book-profile.component';
+import { AuthorProfileComponent } from './author-profile/author-profile.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { ViewBooksComponent } from './users-page/book/view-books/view-books.comp
     AddBooksComponent,
     EditBooksComponent,
     ViewBooksComponent,
+    BookProfileComponent,
+    AuthorProfileComponent,
   ],
   imports: [
     HttpClientModule,
