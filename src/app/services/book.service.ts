@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from './../../environments/environment';
 import { Book } from '../models/book';
@@ -10,6 +10,24 @@ import { map, tap } from 'rxjs/operators';
 })
 export class BookService {
   constructor(private http: HttpClient) {}
+
+  getAllBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>(`${environment.apiUri}/Books`);
+  }
+
+  getBook(isbn13: string): Observable<Book> {
+    return this.http.get<Book>(`${environment.apiUri}/Books/${isbn13}`);
+  }
+
+  addBookPicture(isbn: string, file: File) {
+    return this.http.put(`${environment.apiUri}/Books/${isbn}/picture`, file);
+  }
+
+  getBookPicture(isbn: string) {
+    return this.http.get(`${environment.apiUri}/Books/${isbn}/picture`, {
+      headers: new HttpHeaders({ 'Content-Type': 'image/jpeg' }),
+    });
+  }
 
   addBook(book: Book): Observable<Book> {
     return this.http
