@@ -128,6 +128,7 @@
                       class="form-control"
                       formControlName="about"
                       rows="6"
+                      placeholder="{{ chosenBook.abstract }}"
                     ></textarea>
                   </div>
                   <br />
@@ -139,6 +140,7 @@
                       type="text"
                       class="form-control"
                       formControlName="publisher"
+                      placeholder="{{ chosenBook.publisher }}"
                     />
                   </div>
                   <br />
@@ -149,6 +151,7 @@
                       type="date"
                       class="form-control"
                       formControlName="date_published"
+                      placeholder="{{ chosenBook.date_published }}"
                     />
                   </div>
                   <br />
@@ -165,7 +168,7 @@
 
                   <div class="form-group">
                     <label>Tags </label>
-                    <ng-select
+                    <!-- <ng-select
                       [multiple]="true"
                       class="tags-view"
                       formControlName="tags"
@@ -175,7 +178,12 @@
                         [value]="tag.id"
                         >{{ tag.description }}</ng-option
                       >
-                    </ng-select>
+                    </ng-select> -->
+                    <select class="form-control" formControlName="tags">
+                      <option *ngFor="let tag of tagsList" [value]="tag.id">{{
+                        tag.description
+                      }}</option>
+                    </select>
                   </div>
                   <br />
 
@@ -185,6 +193,7 @@
                       class="form-control"
                       formControlName="about"
                       rows="6"
+                      placeholder="{{ chosenBook.about }}"
                     ></textarea>
                   </div>
                   <br />
