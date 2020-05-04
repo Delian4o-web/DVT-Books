@@ -34,4 +34,11 @@ export class BookService {
       .post<Book>(`${environment.apiUri}/Books`, book)
       .pipe(tap((data) => console.log('Book added :' + data)));
   }
+
+  updateBook(isbn13: string, bookToUpdate: Book): Observable<Book> {
+    return this.http.put<Book>(
+      `${environment.apiUri}/Books/${isbn13}`,
+      bookToUpdate
+    );
+  }
 }
