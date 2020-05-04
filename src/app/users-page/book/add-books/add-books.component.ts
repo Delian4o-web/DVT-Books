@@ -27,7 +27,6 @@ export class AddBooksComponent implements OnInit {
   tagsList: Tag[];
   selectedTags: { id: string; href: string; description: string }[] = [];
   selectedFile: File;
-  userISBNNumber: string;
 
   constructor(
     private fb: FormBuilder,
@@ -83,6 +82,10 @@ export class AddBooksComponent implements OnInit {
     return this.registerBookForm.get('date_published');
   }
 
+  get bookTitle(): AbstractControl {
+    return this.registerBookForm.get('title');
+  }
+
   getVal() {
     this.authorService.getAuthor(this.selectedGroup.id).subscribe((x) => {
       this.chosenAuthor = x;
@@ -108,12 +111,14 @@ export class AddBooksComponent implements OnInit {
         .addBookPicture(this.isbnNumber.value, this.selectedFile)
         .subscribe();
     });
+
+    alert(this.bookTitle.value + ' added!');
+    window.location.reload();
   }
 
   onSubmit() {
     this.submitted = true;
     if (this.registerBookForm.valid) {
-      this.userISBNNumber = this.isbnNumber.value;
       this.addBook();
     }
   }

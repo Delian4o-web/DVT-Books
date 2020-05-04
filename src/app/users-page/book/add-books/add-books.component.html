@@ -8,6 +8,26 @@
             [formGroup]="registerBookForm"
             (ngSubmit)="onSubmit()"
           >
+            <div class="uploadImageMenu">
+              <label>Upload an image </label>
+              <input
+                style="display: none;"
+                type="file"
+                (change)="onFileChanged($event)"
+                accept="image/bmp,image/gif,image/jpeg,image/png"
+                autocomplete="none"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                class="form-control"
+                formControlName="image"
+                #fileInput
+              />
+              <button (click)="fileInput.click()" class="btn">
+                Select File
+              </button>
+            </div>
+            <br />
             <div class="parent">
               <div class="div1">
                 <div class="form-group">
@@ -170,25 +190,7 @@
                 </button>
                 <hr />
                 <br />
-                <div class="uploadImageMenu">
-                  <label>Upload an image </label>
-                  <input
-                    style="display: none;"
-                    type="file"
-                    (change)="onFileChanged($event)"
-                    accept="image/bmp,image/gif,image/jpeg,image/png"
-                    autocomplete="none"
-                    autocorrect="off"
-                    autocapitalize="off"
-                    spellcheck="false"
-                    class="form-control"
-                    formControlName="image"
-                    #fileInput
-                  />
-                  <button (click)="fileInput.click()" class="btn">
-                    Select File
-                  </button>
-                </div>
+
                 <br />
               </div>
             </div>
