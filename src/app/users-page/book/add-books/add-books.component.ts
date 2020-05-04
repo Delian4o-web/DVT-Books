@@ -25,25 +25,27 @@ export class AddBooksComponent implements OnInit {
   authorsList: Author[];
   book = new Book();
   tagsList: Tag[];
+  selectedTags: { id: string; href: string; description: string }[] = [];
+  selectedFile: File;
+  userISBNNumber: string;
 
   constructor(
     private fb: FormBuilder,
     public bookService: BookService,
     public authorService: AuthorService,
-    public customValidator: IsbnvalidationService,
     public tagService: TagService
   ) {}
 
   ngOnInit(): void {
     this.registerBookForm = this.fb.group({
-      isbn10: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      isbn10: ['', [Validators.required, Validators.pattern('^[0-9-]*$')]],
       isbn13: [
         '',
         [
           Validators.required,
-          Validators.pattern(
-            '[0-9]*[-| ][0-9]*[-| ][0-9]*[-| ][0-9]*[-| ][0-9]*'
-          ),
+          // Validators.pattern(
+          //   '[0-9]*[-| ][0-9]*[-| ][0-9]*[-| ][0-9]*[-| ][0-9]*'
+          // ),
         ],
       ],
       title: ['', [Validators.required]],
@@ -65,12 +67,16 @@ export class AddBooksComponent implements OnInit {
     });
   }
 
-  get author(): AbstractControl {
-    return this.registerBookForm.get('author');
-  }
-
   get tags(): AbstractControl {
     return this.registerBookForm.get('tags');
+  }
+
+  get isbnNumber(): AbstractControl {
+    return this.registerBookForm.get('isbn13');
+  }
+
+  get author(): AbstractControl {
+    return this.registerBookForm.get('author');
   }
 
   get date(): AbstractControl {
@@ -87,16 +93,27 @@ export class AddBooksComponent implements OnInit {
     return this.registerBookForm.controls;
   }
 
+  onFileChanged(event) {
+    this.selectedFile = event.target.files[0];
+  }
+
   addBook() {
     this.book = this.registerBookForm.value;
     this.book.author = this.authorsList.find((x) => x.id === this.author.value);
-    this.book.tags = this.tagsList.filter((x) => x.id === this.tags.value);
-    this.bookService.addBook(this.book).subscribe();
+    this.selectedTags = [this.tagsList.find((x) => x.id === this.tags.value)];
+    this.book.tags = this.selectedTags;
+
+    this.bookService.addBook(this.book).subscribe((x) => {
+      this.bookService
+        .addBookPicture(this.isbnNumber.value, this.selectedFile)
+        .subscribe();
+    });
   }
 
   onSubmit() {
     this.submitted = true;
     if (this.registerBookForm.valid) {
+      this.userISBNNumber = this.isbnNumber.value;
       this.addBook();
     }
   }
