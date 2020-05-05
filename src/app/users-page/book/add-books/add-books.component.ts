@@ -112,8 +112,6 @@ export class AddBooksComponent implements OnInit {
 
     alert(this.bookTitle.value + ' added!');
     window.location.reload();
-
-    console.log(this.book.tags);
   }
 
   onSubmit() {
