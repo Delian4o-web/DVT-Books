@@ -10,5 +10,7 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./users-page.component.scss'],
 })
 export class UsersPageComponent implements OnInit {
+  constructor(public auth: AuthService) {}
+
   ngOnInit(): void {}
 }
