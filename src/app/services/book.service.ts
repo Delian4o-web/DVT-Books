@@ -24,9 +24,7 @@ export class BookService {
   }
 
   getBookPicture(isbn: string) {
-    return this.http.get(`${environment.apiUri}/Books/${isbn}/picture`, {
-      headers: new HttpHeaders({ 'Content-Type': 'image/jpeg' }),
-    });
+    return this.http.get(`${environment.apiUri}/Books/${isbn}/picture`);
   }
 
   addBook(book: Book): Observable<Book> {
