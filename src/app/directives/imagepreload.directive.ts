@@ -2,6 +2,7 @@ import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
   selector: 'img[default]',
+
   host: {
     '(error)': 'updateUrl()',
     '(load)': 'load()',

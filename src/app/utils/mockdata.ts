@@ -92,7 +92,7 @@ export const booksMock = [
       id: '233fa6c5-435d-4457-bf27-f602ba3426d9',
       name: 'John Middleton Smith',
     },
-    publisher: "O'Reilly Publishers",
+    publisher: 'O"Reilly Publishers',
     date_published: '2020-04-27T00:00:00+00:00',
     tags: [
       {

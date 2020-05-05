@@ -1,6 +1,5 @@
 import { Tag } from './tag';
 import { Author } from './author';
-// tslint:disable:variable-name
 export class Book {
   isbn10: string;
   isbn13: string;

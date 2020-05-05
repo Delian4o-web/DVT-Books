@@ -11,7 +11,6 @@ describe('EditAuthorsComponent', () => {
   let fixture: ComponentFixture<EditAuthorsComponent>;
   let de: DebugElement;
   let selectEl: DebugElement;
-  let el: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

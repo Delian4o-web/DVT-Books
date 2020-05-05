@@ -32,7 +32,7 @@ describe('BookService : API Requests', () => {
   });
 
   it('getBook() should return one book', () => {
-    const bookISBN: string = '9780133966152';
+    const bookISBN = '9780133966152';
     service.getBook(bookISBN).subscribe();
     const req = httpMock.expectOne(`${environment.apiUri}/Books/${bookISBN}`);
     req.flush({});
@@ -41,7 +41,7 @@ describe('BookService : API Requests', () => {
   });
 
   it('getBookPicture() should return a specificed books picture', () => {
-    const bookISBN: string = '9780133966152';
+    const bookISBN = '9780133966152';
     service.getBookPicture(bookISBN).subscribe();
     const req = httpMock.expectOne(
       `${environment.apiUri}/Books/${bookISBN}/picture`
