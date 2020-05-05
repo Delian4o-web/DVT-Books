@@ -1,3 +1,5 @@
 export class Tag {
-  tags: string[];
+  href: string;
+  id: string;
+  description: string;
 }

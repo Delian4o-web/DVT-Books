@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,12 @@ import { TestComponent } from './test/test.component';
 import { ViewAuthorsComponent } from './users-page/author/view-authors/view-authors.component';
 import { EditAuthorsComponent } from './users-page/author/edit-authors/edit-authors.component';
 import { AddAuthorsComponent } from './users-page/author/add-authors/add-authors.component';
+import { BookComponent } from './users-page/book/book.component';
+import { AddBooksComponent } from './users-page/book/add-books/add-books.component';
+import { EditBooksComponent } from './users-page/book/edit-books/edit-books.component';
+import { ViewBooksComponent } from './users-page/book/view-books/view-books.component';
+import { BookProfileComponent } from './book-profile/book-profile.component';
+import { AuthorProfileComponent } from './author-profile/author-profile.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +37,19 @@ import { AddAuthorsComponent } from './users-page/author/add-authors/add-authors
     ViewAuthorsComponent,
     EditAuthorsComponent,
     AddAuthorsComponent,
+    BookComponent,
+    AddBooksComponent,
+    EditBooksComponent,
+    ViewBooksComponent,
+    BookProfileComponent,
+    AuthorProfileComponent,
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    NgSelectModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
