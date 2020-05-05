@@ -32,6 +32,30 @@
             "scripts": []
           },
           "configurations": {
+            "en": {
+              "aot": true,
+              "outputPath": "dist/DVT-Books/",
+              "i18nFile": "src/app/locale/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error"
+            },
+            "af": {
+              "aot": true,
+              "outputPath": "dist/DVT-Books-af/",
+              "i18nFile": "src/app/locale/messages.af.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "af",
+              "i18nMissingTranslation": "error"
+            },
+            "zu": {
+              "aot": true,
+              "outputPath": "dist/dist/DVT-Books-zu/",
+              "i18nFile": "src/app/locale/messages.zu.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "zu",
+              "i18nMissingTranslation": "error"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -72,6 +96,15 @@
           "configurations": {
             "production": {
               "browserTarget": "DVT-Books:build:production"
+            },
+            "en": {
+              "browserTarget": "DVT-Books:build:en"
+            },
+            "af": {
+              "browserTarget": "DVT-Books:build:af"
+            },
+            "zu": {
+              "browserTarget": "DVT-Books:build:zu"
             }
           }
         },

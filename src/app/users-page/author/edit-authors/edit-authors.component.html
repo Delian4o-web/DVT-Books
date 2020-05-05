@@ -4,7 +4,12 @@
       <div class="card">
         <div class="card-body">
           <div class="selectMenu">
-            <label>Select an Author :</label>
+            <label
+              i18n="
+                Edit Author Select|Words Edit Author Select@@Words Edit Author
+                Select"
+              >Select an Author :</label
+            >
             <select
               (click)="getVal()"
               class="form-control"
@@ -25,7 +30,12 @@
               (ngSubmit)="onUpdate()"
             >
               <div class="form-group">
-                <label>Firstname : <b class="text-error">*</b></label>
+                <label
+                  i18n="
+                    Edit Author Firstname Input|Words Edit Author Firstname
+                    Input@@Words Edit Author Firstname Input"
+                  >Firstname : <b class="text-error">*</b></label
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -44,7 +54,12 @@
                 </span>
               </div>
               <div class="form-group">
-                <label>Middlename :</label>
+                <label
+                  i18n="
+                    Edit Author Middlename Input|Words Edit Author Middlename
+                    Input@@Words Edit Author Middlename Input"
+                  >Middlename :</label
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -53,7 +68,12 @@
                 />
               </div>
               <div class="form-group">
-                <label>Lastname : <b class="text-error">*</b></label>
+                <label
+                  i18n="
+                    Edit Author Lastname Input|Words Edit Author Lastname
+                    Input@@Words Edit Author Lastname Input"
+                  >Lastname : <b class="text-error">*</b></label
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -72,7 +92,12 @@
                 </span>
               </div>
               <div class="form-group">
-                <label>About the Author :</label>
+                <label
+                  i18n="
+                    Edit Author About Input|Words Edit Author About Input@@Words
+                    Edit Author About Input"
+                  >About the Author :</label
+                >
                 <textarea
                   class="form-control"
                   formControlName="about"
@@ -82,6 +107,9 @@
               </div>
               <div class="form-group">
                 <button
+                  i18n="
+                    Edit Author Button|Words Edit Author Buttont@@Words Edit
+                    Author Button"
                   [disabled]="!updateAuthorForm.valid"
                   type="submit"
                   class="btn"

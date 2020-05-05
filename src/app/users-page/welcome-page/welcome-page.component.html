@@ -8,14 +8,28 @@
           class="img-rounded img-fluid"
           alt=""
         /><br /><br />
-        <h2>Welcome : {{ profile.nickname }} !</h2>
+        <h2
+          i18n="
+            Welcome Page User Words|WordsWelcome Page User Words@@Words Welcome
+            Page User Words"
+        >
+          Welcome :
+        </h2>
+        <h2>{{ profile.nickname }} !</h2>
         <div *ngIf="auth.userRole == 'Admin'">
-          <p>
+          <p
+            i18n="
+              Welcome Page Admin|Words Welcome Page Admin@@Words Welcome Page
+              Admin"
+          >
             Add , Search , Update , and Delete books!
           </p>
         </div>
         <div *ngIf="auth.userRole == 'User'">
-          <p>
+          <p
+            i18n="
+              Welcome Page User|Words Welcome Page User@@Words Welcome Page User"
+          >
             View book information and search for books!
           </p>
         </div>

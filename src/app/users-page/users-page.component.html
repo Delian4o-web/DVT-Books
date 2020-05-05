@@ -5,7 +5,13 @@
 <ng-container *ngIf="auth.isAdmin == true">
   <section class="service-section" id="services">
     <div class="container">
-      <h3>Services</h3>
+      <h3
+        i18n="
+          Users Page Services|Words Users Page Services@@Words Users Page
+          Services"
+      >
+        Services
+      </h3>
 
       <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -14,7 +20,11 @@
               <span class="fa fa-users" aria-hidden="true"></span>
             </div>
             <h4><a href="http://localhost:4200/book">Books</a></h4>
-            <p>
+            <p
+              i18n="
+                Users Page Admin Describe Books|Words Users Page Admin Describe
+                Books@@Words Users Page Admin Describe Books"
+            >
               Admin will be able to view all the books in the database , view a
               specific book , as well as add books and edit already exisiting
               books in the database.
@@ -28,7 +38,11 @@
               <span class="fa fa-book" aria-hidden="true"></span>
             </div>
             <h4><a href="http://localhost:4200/author"> Authors</a></h4>
-            <p>
+            <p
+              i18n="
+                Users Page Admin Describe authors|Words Users Page Admin
+                Describe authors@@Words Users Page Admin Describe authors"
+            >
               Admin will be able to view all the authors in the database , view
               a specific authors information , as well as add authors and edit
               already exisiting authors in the database.
@@ -41,6 +55,6 @@
 </ng-container>
 
 <ng-container *ngIf="auth.isAdmin == false">
-  Search <input type="text" /> <br /><br />
+  <input type="text" /> <br /><br />
   <app-view-books></app-view-books>
 </ng-container>

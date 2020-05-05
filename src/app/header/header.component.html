@@ -11,6 +11,7 @@
   <ul class="responsive-nav menu">
     <li class="menu-item">
       <a
+        i18n="Author Header|Words Author Header@@Words Author Header"
         href="http://localhost:4200/author"
         *ngIf="auth.isAdmin"
         class="active"
@@ -19,13 +20,24 @@
       >
     </li>
     <li class="menu-item">
-      <a *ngIf="auth.isAdmin" href="http://localhost:4200/book">Books</a>
+      <a
+        i18n="Books Header|Words Books Header@@Words Books Header"
+        *ngIf="auth.isAdmin"
+        href="http://localhost:4200/book"
+        >Books</a
+      >
     </li>
     <li class="menu-item">
-      <a *ngIf="auth.isAdmin" href="http://localhost:4200/profile">Tags</a>
+      <a
+        i18n="Tags Header|Words Tags Header@@Words Tags Header"
+        *ngIf="auth.isAdmin"
+        href="http://localhost:4200/profile"
+        >Tags</a
+      >
     </li>
     <li class="menu-item">
       <button
+        i18n="Logout Header|Words Logout Header@@Words Logout Header"
         (click)="auth.logout()"
         class="btn btn-primary btn-primary-outline btn-pill"
       >

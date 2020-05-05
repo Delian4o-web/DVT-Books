@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="Words DVT Books" datatype="html">
+        <source>DVT Books</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Words DVT Books</note>
+        <note priority="1" from="meaning">DVT Books</note>
+      </trans-unit>
+      <trans-unit id="Words Home-Page
+      description" datatype="html">
+        <source>
+    DVT&apos;s personal book library where you can find many programming books , on
+    many different topics.
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Words Home-Page description</note>
+        <note priority="1" from="meaning">
+      Home-Page description</note>
+      </trans-unit>
+      <trans-unit id="Words Users Page
+          Services" datatype="html">
+        <source>
+        Services
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/users-page.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Words Users Page Services</note>
+        <note priority="1" from="meaning">
+          Users Page Services</note>
+      </trans-unit>
+      <trans-unit id="Words Users Page Admin Describe Books" datatype="html">
+        <source>
+              Admin will be able to view all the books in the database , view a
+              specific book , as well as add books and edit already exisiting
+              books in the database.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/users-page.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Words Users Page Admin Describe
+                Books</note>
+        <note priority="1" from="meaning">
+                Users Page Admin Describe Books</note>
+      </trans-unit>
+      <trans-unit id="Words Users Page Admin Describe authors" datatype="html">
+        <source>
+              Admin will be able to view all the authors in the database , view
+              a specific authors information , as well as add authors and edit
+              already exisiting authors in the database.
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/users-page.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Words Users Page Admin
+                Describe authors</note>
+        <note priority="1" from="meaning">
+                Users Page Admin Describe authors</note>
+      </trans-unit>
+      <trans-unit id="Words Author Header" datatype="html">
+        <source>Authors</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Words Author Header</note>
+        <note priority="1" from="meaning">Author Header</note>
+      </trans-unit>
+      <trans-unit id="Words Books Header" datatype="html">
+        <source>Books</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Words Books Header</note>
+        <note priority="1" from="meaning">Books Header</note>
+      </trans-unit>
+      <trans-unit id="Words Tags Header" datatype="html">
+        <source>Tags</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Words Tags Header</note>
+        <note priority="1" from="meaning">Tags Header</note>
+      </trans-unit>
+      <trans-unit id="Words Logout Header" datatype="html">
+        <source>
+        Logout
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">Words Logout Header</note>
+        <note priority="1" from="meaning">Logout Header</note>
+      </trans-unit>
+      <trans-unit id="Words Add Author Pill" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Add an Author</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/author.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Words Add Author Pill</note>
+        <note priority="1" from="meaning">Add Author Pill</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Author Pill" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Update/Edit an Author</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/author.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Author Pill</note>
+        <note priority="1" from="meaning">Edit Author Pill</note>
+      </trans-unit>
+      <trans-unit id="Words Delete Author Pill" datatype="html">
+        <source>
+        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Delete an Author</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/author.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">Words Delete Author Pill</note>
+        <note priority="1" from="meaning">
+          Delete Author Pill</note>
+      </trans-unit>
+      <trans-unit id="Words View Author Pill" datatype="html">
+        <source>
+        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> View Authors</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/author.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Words View Author Pill</note>
+        <note priority="1" from="meaning">View Author Pill</note>
+      </trans-unit>
+      <trans-unit id="Words Welcome
+            Page User Words" datatype="html">
+        <source>
+          Welcome :
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/welcome-page/welcome-page.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">WordsWelcome Page User Words</note>
+        <note priority="1" from="meaning">
+            Welcome Page User Words</note>
+      </trans-unit>
+      <trans-unit id="Words Welcome Page
+              Admin" datatype="html">
+        <source>
+            Add , Search , Update , and Delete books!
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/welcome-page/welcome-page.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Words Welcome Page Admin</note>
+        <note priority="1" from="meaning">
+              Welcome Page Admin</note>
+      </trans-unit>
+      <trans-unit id="Words Welcome Page User" datatype="html">
+        <source>
+            View book information and search for books!
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/welcome-page/welcome-page.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Words Welcome Page User</note>
+        <note priority="1" from="meaning">
+              Welcome Page User</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Author
+                Select" datatype="html">
+        <source>Select an Author :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Author Select</note>
+        <note priority="1" from="meaning">
+                Edit Author Select</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Author Firstname Input" datatype="html">
+        <source>Firstname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Author Firstname
+                    Input</note>
+        <note priority="1" from="meaning">
+                    Edit Author Firstname Input</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Author Middlename Input" datatype="html">
+        <source>Middlename :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Author Middlename
+                    Input</note>
+        <note priority="1" from="meaning">
+                    Edit Author Middlename Input</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Author Lastname Input" datatype="html">
+        <source>Lastname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Author Lastname
+                    Input</note>
+        <note priority="1" from="meaning">
+                    Edit Author Lastname Input</note>
+      </trans-unit>
+      <trans-unit id="Words
+                    Edit Author About Input" datatype="html">
+        <source>About the Author :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Author About Input</note>
+        <note priority="1" from="meaning">
+                    Edit Author About Input</note>
+      </trans-unit>
+      <trans-unit id="Words Edit
+                    Author Button" datatype="html">
+        <source>
+                  Update Author
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Author Buttont</note>
+        <note priority="1" from="meaning">
+                    Edit Author Button</note>
+      </trans-unit>
+      <trans-unit id="Words
+                  Author Firstname Input" datatype="html">
+        <source>Firstname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/add-authors/add-authors.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Words Author Firstname Input</note>
+        <note priority="1" from="meaning">
+                  Author Firstname Input</note>
+      </trans-unit>
+      <trans-unit id="Words
+                  Author Middlename Input" datatype="html">
+        <source>Middlename :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/add-authors/add-authors.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Words Author Middlename Input</note>
+        <note priority="1" from="meaning">
+                  Author Middlename Input</note>
+      </trans-unit>
+      <trans-unit id="Words
+                  Author Lastname Input" datatype="html">
+        <source>Lastname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/add-authors/add-authors.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">Words Author Lastname Input</note>
+        <note priority="1" from="meaning">
+                  Author Lastname Input</note>
+      </trans-unit>
+      <trans-unit id="Words Author
+                  About Input" datatype="html">
+        <source>About the Author :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/add-authors/add-authors.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <note priority="1" from="description">Words Author About Input</note>
+        <note priority="1" from="meaning">
+                  Author About Input</note>
+      </trans-unit>
+      <trans-unit id="Words Add Author
+                  Button" datatype="html">
+        <source>
+                Add Author
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/author/add-authors/add-authors.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+        <note priority="1" from="description">Words Add Author Button</note>
+        <note priority="1" from="meaning">
+                  Add Author Button</note>
+      </trans-unit>
+      <trans-unit id="Words Add Book Pill" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Add a Book</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/book.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Words Add Book Pill</note>
+        <note priority="1" from="meaning">Add Book Pill</note>
+      </trans-unit>
+      <trans-unit id="Words Update Book Pill" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Update a Book</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/book.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Words Update Book Pill</note>
+        <note priority="1" from="meaning">Update Book Pill</note>
+      </trans-unit>
+      <trans-unit id="Words Delete Book Pill" datatype="html">
+        <source>
+      <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Delete a Book</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/book.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Words Delete Book Pill</note>
+        <note priority="1" from="meaning">Delete Book Pill</note>
+      </trans-unit>
+      <trans-unit id="Words View Book Pill" datatype="html">
+        <source>
+      <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> View Books</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/book.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <note priority="1" from="description">Words View Book Pill</note>
+        <note priority="1" from="meaning">View Book Pill</note>
+      </trans-unit>
+      <trans-unit id="Words Book Image
+                  Input" datatype="html">
+        <source>Upload an image
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Words Book Image Input</note>
+        <note priority="1" from="meaning">
+                  Book Image Input</note>
+      </trans-unit>
+      <trans-unit id="Words Book Image
+                  Button" datatype="html">
+        <source>
+                Select File
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Words Book Image Button</note>
+        <note priority="1" from="meaning">
+                  Book Image Button</note>
+      </trans-unit>
+      <trans-unit id="Words Book
+                      ISBN10 Input" datatype="html">
+        <source>ISBN10 Number <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <note priority="1" from="description">Words Book ISBN10 Input</note>
+        <note priority="1" from="meaning">
+                      Book ISBN10 Input</note>
+      </trans-unit>
+      <trans-unit id="Words Book
+                      ISBN13 Input" datatype="html">
+        <source>ISBN 13 Number <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+        <note priority="1" from="description">Words Book ISBN13 Input</note>
+        <note priority="1" from="meaning">
+                      Book ISBN13 Input</note>
+      </trans-unit>
+      <trans-unit id="Words Book Title
+                      Input" datatype="html">
+        <source>Title <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+        <note priority="1" from="description">Words Book Title Input</note>
+        <note priority="1" from="meaning">
+                      Book Title Input</note>
+      </trans-unit>
+      <trans-unit id="Words Book
+                      Author Input" datatype="html">
+        <source>Author
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+        <note priority="1" from="description">Words Book Author Input</note>
+        <note priority="1" from="meaning">
+                      Book Author Input</note>
+      </trans-unit>
+      <trans-unit id="Words Book
+                      Abstract Input" datatype="html">
+        <source>Abstract
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+        <note priority="1" from="description">Words Book Abstract Input</note>
+        <note priority="1" from="meaning">
+                      Book Abstract Input</note>
+      </trans-unit>
+      <trans-unit id="Words
+                      Book Publisher Input" datatype="html">
+        <source>Publisher
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+        <note priority="1" from="description">Words Book Publisher Input</note>
+        <note priority="1" from="meaning">
+                      Book Publisher Input</note>
+      </trans-unit>
+      <trans-unit id="Words Book Date Published Input" datatype="html">
+        <source>Date Published
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">190</context>
+        </context-group>
+        <note priority="1" from="description">Words Book Date Published
+                      Input</note>
+        <note priority="1" from="meaning">
+                      Book Date Published Input</note>
+      </trans-unit>
+      <trans-unit id="Words Book Tags
+                      Input" datatype="html">
+        <source>Tags
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">205</context>
+        </context-group>
+        <note priority="1" from="description">Words Book Tags Input</note>
+        <note priority="1" from="meaning">
+                      Book Tags Input</note>
+      </trans-unit>
+      <trans-unit id="Words Book About
+                      Input" datatype="html">
+        <source>About
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">221</context>
+        </context-group>
+        <note priority="1" from="description">Words Book About Input</note>
+        <note priority="1" from="meaning">
+                      Book About Input</note>
+      </trans-unit>
+      <trans-unit id="Words Book Add Button" datatype="html">
+        <source>
+                  Add Book
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
+          <context context-type="linenumber">238</context>
+        </context-group>
+        <note priority="1" from="description">WordsBook Add Button</note>
+        <note priority="1" from="meaning">
+                    Book Add Button</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Book Select" datatype="html">
+        <source>Select a Book :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book Select</note>
+        <note priority="1" from="meaning">
+                Edit Book Select</note>
+      </trans-unit>
+      <trans-unit id="Words Books
+                    Image Update" datatype="html">
+        <source>Select image to update :
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <note priority="1" from="description">Words Books Image Update</note>
+        <note priority="1" from="meaning">
+                    Books Image Update</note>
+      </trans-unit>
+      <trans-unit id="Words
+                    Edit Book Image Input" datatype="html">
+        <source>
+                  Select File
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book Image Input</note>
+        <note priority="1" from="meaning">
+                    Edit Book Image Input</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Book ISBN10 Input" datatype="html">
+        <source>ISBN10 Number <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book ISBN10
+                        Input</note>
+        <note priority="1" from="meaning">
+                        Edit Book ISBN10 Input</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Book ISBN13 Input" datatype="html">
+        <source>ISBN 13 Number <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book ISBN13
+                        Input</note>
+        <note priority="1" from="meaning">
+                        Edit Book ISBN13 Input</note>
+      </trans-unit>
+      <trans-unit id="Words
+                        Edit Book Title Input" datatype="html">
+        <source>Title <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book Title Input</note>
+        <note priority="1" from="meaning">
+                        Edit Book Title Input</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Book Author Input" datatype="html">
+        <source>Author
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">162</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book Author
+                        Input</note>
+        <note priority="1" from="meaning">
+                        Edit Book Author Input</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Book Abstract Input" datatype="html">
+        <source>Abstract
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book Abstract
+                        Input</note>
+        <note priority="1" from="meaning">
+                        Edit Book Abstract Input</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Book Publisher Input" datatype="html">
+        <source>Publisher
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book Publisher
+                        Input</note>
+        <note priority="1" from="meaning">
+                        Edit Book Publisher Input</note>
+      </trans-unit>
+      <trans-unit id="Words Edit Book Date Publishe Input" datatype="html">
+        <source>Date Published
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">217</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book Date
+                        Publishe Input</note>
+        <note priority="1" from="meaning">
+                        Edit Book Date Publishe Input</note>
+      </trans-unit>
+      <trans-unit id="Words
+                        Edit Book Tags Input" datatype="html">
+        <source>Tags
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">233</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book Tags Input</note>
+        <note priority="1" from="meaning">
+                        Edit Book Tags Input</note>
+      </trans-unit>
+      <trans-unit id="Words
+                        Edit Book About Input" datatype="html">
+        <source>About
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">248</context>
+        </context-group>
+        <note priority="1" from="description">Words Edit Book About Input</note>
+        <note priority="1" from="meaning">
+                        Edit Book About Input</note>
+      </trans-unit>
+      <trans-unit id="Words Add Book
+                      Button" datatype="html">
+        <source>
+                    Update Book
+                  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
+          <context context-type="linenumber">267</context>
+        </context-group>
+        <note priority="1" from="description">Words Add Book Button</note>
+        <note priority="1" from="meaning">
+                      Add Book Button</note>
+      </trans-unit>
+      <trans-unit id="Words Book
+        Profile Written By" datatype="html">
+        <source>
+      Written by :
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/book-profile/book-profile.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Words Book Profile Written By</note>
+        <note priority="1" from="meaning">
+        Book Profile Written By</note>
+      </trans-unit>
+      <trans-unit id="Words Book Details
+          Heading" datatype="html">
+        <source>
+        Book Details :
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/book-profile/book-profile.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">Words Book Details Heading</note>
+        <note priority="1" from="meaning">
+          Book Details Heading</note>
+      </trans-unit>
+      <trans-unit id="Words Publisher Heading" datatype="html">
+        <source>Publisher :
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/book-profile/book-profile.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">Words Publisher Heading</note>
+        <note priority="1" from="meaning">
+            Publisher Heading</note>
+      </trans-unit>
+      <trans-unit id="Words Date
+            Published Heading" datatype="html">
+        <source>Date Published :
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/book-profile/book-profile.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <note priority="1" from="description">Words Date Published Heading</note>
+        <note priority="1" from="meaning">
+            Date Published Heading</note>
+      </trans-unit>
+      <trans-unit id="Words Related Books
+      Heading" datatype="html">
+        <source>
+    Related Books
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/book-profile/book-profile.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <note priority="1" from="description">Words Related Books Heading</note>
+        <note priority="1" from="meaning">
+      Related Books Heading</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

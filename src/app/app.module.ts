@@ -24,7 +24,6 @@ import { ViewBooksComponent } from './users-page/book/view-books/view-books.comp
 import { BookProfileComponent } from './book-profile/book-profile.component';
 import { AuthorProfileComponent } from './author-profile/author-profile.component';
 import { ImagepreloadDirective } from './directives/imagepreload.directive';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -55,7 +54,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
-    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

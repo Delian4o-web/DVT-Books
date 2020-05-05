@@ -3,8 +3,14 @@
 <div class="container">
   <h1 class="my-4">
     {{ bookInfo.title }}
-    <h5>
+    <h5
+      i18n="
+        Book Profile Written By|Words Book Profile Written By@@Words Book
+        Profile Written By"
+    >
       Written by :
+    </h5>
+    <h5>
       <a [routerLink]="['/author', bookInfo.author.id]">{{
         bookInfo.author.name
       }}</a>
@@ -26,11 +32,29 @@
       <p class="text-left">
         {{ bookInfo.about }}
       </p>
-      <h3 class="my-3">Book Details :</h3>
+      <h3
+        i18n="
+          Book Details Heading|Words Book Details Heading@@Words Book Details
+          Heading"
+        class="my-3"
+      >
+        Book Details :
+      </h3>
       <p class="text-left">
-        <b>Publisher : </b> {{ bookInfo.publisher }} <br />
+        <b
+          i18n="
+            Publisher Heading|Words Publisher Heading@@Words Publisher Heading"
+          >Publisher :
+        </b>
+        {{ bookInfo.publisher }} <br />
         <br />
-        <b>Date Published : </b> {{ bookInfo.date_published | date }} <br />
+        <b
+          i18n="
+            Date Published Heading|Words Date Published Heading@@Words Date
+            Published Heading"
+          >Date Published :
+        </b>
+        {{ bookInfo.date_published | date }} <br />
         <br />
         <b>ISBN-13 : </b> {{ bookInfo.isbn13 }} <br />
         <br />
@@ -41,8 +65,14 @@
   </div>
   <p></p>
 
-  <!-- Related Projects -->
-  <h3 class="my-4">Related Books</h3>
+  <h3
+    i18n="
+      Related Books Heading|Words Related Books Heading@@Words Related Books
+      Heading"
+    class="my-4"
+  >
+    Related Books
+  </h3>
 
   <div class="row">
     <div class="col-md-3 col-sm-6 mb-4">
