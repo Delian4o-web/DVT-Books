@@ -7,16 +7,25 @@ import { BookProfileComponent } from './book-profile/book-profile.component';
 import { AuthorProfileComponent } from './author-profile/author-profile.component';
 import { AuthorComponent } from './users-page/author/author.component';
 import { BookComponent } from './users-page/book/book.component';
+import { AuthGuard } from './auth/auth.guard';
 
 export const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'test', component: TestComponent },
-  { path: 'author', component: AuthorComponent },
-  { path: 'book', component: BookComponent },
-  { path: 'book/:id', component: BookProfileComponent },
-  { path: 'author/:id', component: AuthorProfileComponent },
-  { path: 'profile', component: UsersPageComponent },
-  { path: '**', redirectTo: 'profile' },
+  { path: 'author', component: AuthorComponent, canActivate: [AuthGuard] },
+  { path: 'book', component: BookComponent, canActivate: [AuthGuard] },
+  {
+    path: 'book/:id',
+    component: BookProfileComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'author/:id',
+    component: AuthorProfileComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'profile', component: UsersPageComponent, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: 'profile', canActivate: [AuthGuard] },
 ];
 
 @NgModule({
