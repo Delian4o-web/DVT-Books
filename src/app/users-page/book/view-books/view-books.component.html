@@ -1,0 +1,20 @@
+<div class="container">
+  <main class="grid">
+    <article class="card" *ngFor="let book of booksList">
+      <div class="content">
+        <div class="content-overlay"></div>
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/I/51IyLAfOVzL.jpg"
+          class="img-fluid content-image"
+          alt="Sample photo"
+        />
+        <div class="content-details fadeIn-bottom">
+          <h3 class="content-title">
+            <a [routerLink]="['/book', book.isbn13]">{{ book.title }}</a>
+          </h3>
+          <p class="content-text">{{ book.author.name }}</p>
+        </div>
+      </div>
+    </article>
+  </main>
+</div>
