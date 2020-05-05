@@ -10,7 +10,6 @@ import { Author } from '../models/author';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 
 describe('AuthorService : API Requests', () => {
-  let injector: TestBed;
   let service: AuthorService;
   let httpMock: HttpTestingController;
 
@@ -20,7 +19,6 @@ describe('AuthorService : API Requests', () => {
       providers: [AuthorService],
     });
 
-    injector = getTestBed();
     service = TestBed.inject(AuthorService);
     httpMock = TestBed.inject(HttpTestingController);
   });
@@ -29,7 +27,7 @@ describe('AuthorService : API Requests', () => {
     httpMock.verify();
   });
 
-  it('getAuthor() should return an Observable<Author>', () => {
+  it('getAuthor() should return one author', () => {
     service.getAuthor(singleAuthorMock.id).subscribe((authors) => {
       expect(authors).toEqual(singleAuthorMock);
     });
@@ -41,7 +39,7 @@ describe('AuthorService : API Requests', () => {
     req.flush(singleAuthorMock);
   });
 
-  it('getAllAuthors()should return an Observable<Author[]>', () => {
+  it('getAllAuthors() should return all the authors >', () => {
     service.getAllAuthors().subscribe((authors) => {
       expect(authors).toEqual(authorsMock);
     });
@@ -51,7 +49,7 @@ describe('AuthorService : API Requests', () => {
     req.flush(authorsMock);
   });
 
-  it('addAuthor() should create and send a new author to the server and return it', () => {
+  it('addAuthor() should create a new author', () => {
     const author = new Author();
     author.first_name = singleAuthorMock.first_name;
     author.middle_names = singleAuthorMock.middle_names;
