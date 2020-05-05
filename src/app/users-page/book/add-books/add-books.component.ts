@@ -11,6 +11,7 @@ import { AuthorService } from 'src/app/services/author.service';
 import { Author } from 'src/app/models/author';
 import { TagService } from 'src/app/services/tag.service';
 import { Tag } from 'src/app/models/tag';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-add-books',
@@ -27,6 +28,7 @@ export class AddBooksComponent implements OnInit {
   tagsList: Tag[];
   selectedTags: { id: string; href: string; description: string }[] = [];
   selectedFile: File;
+  bookISBNNumber: string;
 
   constructor(
     private fb: FormBuilder,
@@ -86,12 +88,6 @@ export class AddBooksComponent implements OnInit {
     return this.registerBookForm.get('title');
   }
 
-  getVal() {
-    this.authorService.getAuthor(this.selectedGroup.id).subscribe((x) => {
-      this.chosenAuthor = x;
-    });
-  }
-
   get registerFormControl() {
     return this.registerBookForm.controls;
   }
@@ -106,9 +102,11 @@ export class AddBooksComponent implements OnInit {
     this.selectedTags = [this.tagsList.find((x) => x.id === this.tags.value)];
     this.book.tags = this.selectedTags;
 
+    this.bookISBNNumber = this.isbnNumber.value;
+
     this.bookService.addBook(this.book).subscribe((x) => {
       this.bookService
-        .addBookPicture(this.isbnNumber.value, this.selectedFile)
+        .addBookPicture(this.bookISBNNumber, this.selectedFile)
         .subscribe();
     });
 

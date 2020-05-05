@@ -24,9 +24,7 @@ export class BookService {
   }
 
   getBookPicture(isbn: string) {
-    return this.http.get(`${environment.apiUri}/Books/${isbn}/picture`, {
-      headers: new HttpHeaders({ 'Content-Type': 'image/jpeg' }),
-    });
+    return this.http.get(`${environment.apiUri}/Books/${isbn}/picture`);
   }
 
   addBook(book: Book): Observable<Book> {
@@ -36,6 +34,13 @@ export class BookService {
   }
 
   updateBook(isbn13: string, bookToUpdate: Book): Observable<Book> {
+    return this.http.put<Book>(
+      `${environment.apiUri}/Books/${isbn13}`,
+      bookToUpdate
+    );
+  }
+
+  updateBookPicture(isbn13: string, bookToUpdate: Book): Observable<Book> {
     return this.http.put<Book>(
       `${environment.apiUri}/Books/${isbn13}`,
       bookToUpdate

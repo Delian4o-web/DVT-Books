@@ -27,6 +27,7 @@ export class EditBooksComponent implements OnInit {
   chosenBook: Book;
   selectedISBNNo: string;
   bookInfoUpdate: Book;
+  bookISBNNumber: string;
 
   constructor(
     private fb: FormBuilder,
@@ -66,6 +67,10 @@ export class EditBooksComponent implements OnInit {
     return this.updateBookForm.get('author');
   }
 
+  get isbnNumber(): AbstractControl {
+    return this.updateBookForm.get('isbn13');
+  }
+
   get tags(): AbstractControl {
     return this.updateBookForm.get('tags');
   }
@@ -91,9 +96,14 @@ export class EditBooksComponent implements OnInit {
       (x) => x.id === this.tags.value
     );
 
+    this.bookISBNNumber = this.isbnNumber.value;
+
     this.bookService
-      .updateBook(this.selectedISBNNo, this.bookInfoUpdate)
+      .updateBook(this.bookISBNNumber, this.bookInfoUpdate)
       .subscribe();
+
+    alert(this.bookInfoUpdate.title + ' updated!');
+    window.location.reload();
   }
 
   onSubmit() {

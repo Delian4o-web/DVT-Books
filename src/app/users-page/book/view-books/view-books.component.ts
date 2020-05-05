@@ -10,7 +10,6 @@ import { Book } from 'src/app/models/book';
 export class ViewBooksComponent implements OnInit {
   booksList: Book[];
   book: Book;
-  imageFile: any;
 
   constructor(public bookService: BookService) {}
 
@@ -18,10 +17,5 @@ export class ViewBooksComponent implements OnInit {
     this.bookService.getAllBooks().subscribe((x) => {
       this.booksList = x;
     });
-
-    // this.bookService.getBookPicture('9782001758807').subscribe((x) => {
-    //   this.imageFile = x;
-    //   console.log(this.imageFile);
-    // });
   }
 }

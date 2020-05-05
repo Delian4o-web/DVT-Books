@@ -24,6 +24,25 @@
               [formGroup]="updateBookForm"
               (ngSubmit)="onSubmit()"
             >
+              <div class="uploadImageMenu">
+                <label>Select image to update : </label>
+                <input
+                  style="display: none;"
+                  type="file"
+                  accept="image/bmp,image/gif,image/jpeg,image/png"
+                  autocomplete="none"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  class="form-control"
+                  formControlName="image"
+                  #fileInput
+                />
+                <button (click)="fileInput.click()" class="btn">
+                  Select File
+                </button>
+              </div>
+              <br /><br />
               <div class="parent">
                 <div class="div1">
                   <div class="form-group">
@@ -157,28 +176,7 @@
                   <br />
 
                   <div class="form-group">
-                    <label>Select an Image </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      formControlName="image"
-                    />
-                  </div>
-                  <br />
-
-                  <div class="form-group">
                     <label>Tags </label>
-                    <!-- <ng-select
-                      [multiple]="true"
-                      class="tags-view"
-                      formControlName="tags"
-                    >
-                      <ng-option
-                        *ngFor="let tag of tagsList"
-                        [value]="tag.id"
-                        >{{ tag.description }}</ng-option
-                      >
-                    </ng-select> -->
                     <select class="form-control" formControlName="tags">
                       <option *ngFor="let tag of tagsList" [value]="tag.id">{{
                         tag.description
@@ -192,7 +190,7 @@
                     <textarea
                       class="form-control"
                       formControlName="about"
-                      rows="6"
+                      rows="11"
                       placeholder="{{ chosenBook.about }}"
                     ></textarea>
                   </div>
@@ -204,7 +202,7 @@
                     type="submit"
                     class="btn"
                   >
-                    Add Author
+                    Update Book
                   </button>
                 </div>
               </div>
