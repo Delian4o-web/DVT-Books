@@ -10,13 +10,19 @@
 
   <ul class="responsive-nav menu">
     <li class="menu-item">
-      <a href="#home" class="active" style="color: #6f6f6f;">Authors</a>
+      <a
+        href="http://localhost:4200/author"
+        *ngIf="auth.isAdmin"
+        class="active"
+        style="color: #6f6f6f;"
+        >Authors</a
+      >
     </li>
     <li class="menu-item">
-      <a href="#">Books</a>
+      <a *ngIf="auth.isAdmin" href="http://localhost:4200/book">Books</a>
     </li>
     <li class="menu-item">
-      <a href="#">Tags</a>
+      <a *ngIf="auth.isAdmin" href="http://localhost:4200/profile">Tags</a>
     </li>
     <li class="menu-item">
       <button
