@@ -23,6 +23,7 @@ import { EditBooksComponent } from './users-page/book/edit-books/edit-books.comp
 import { ViewBooksComponent } from './users-page/book/view-books/view-books.component';
 import { BookProfileComponent } from './book-profile/book-profile.component';
 import { AuthorProfileComponent } from './author-profile/author-profile.component';
+import { ImagepreloadDirective } from './directives/imagepreload.directive';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { AuthorProfileComponent } from './author-profile/author-profile.componen
     ViewBooksComponent,
     BookProfileComponent,
     AuthorProfileComponent,
+    ImagepreloadDirective,
   ],
   imports: [
     HttpClientModule,
