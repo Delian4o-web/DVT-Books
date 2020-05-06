@@ -10,6 +10,7 @@ import { map, tap } from 'rxjs/operators';
 })
 export class BookService {
   constructor(private http: HttpClient) {}
+  searchUrl: string;
 
   getAllBooks(): Observable<Book[]> {
     return this.http.get<Book[]>(`${environment.apiUri}/Books`);
@@ -49,5 +50,10 @@ export class BookService {
       `${environment.apiUri}/Books/${isbn13}/picture`,
       bookToUpdate
     );
+  }
+
+  getBookList(query: string): Observable<Book[]> {
+    this.searchUrl = environment.apiUri + '/Books?query=' + query;
+    return this.http.get<Book[]>(this.searchUrl);
   }
 }
