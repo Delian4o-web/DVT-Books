@@ -4,6 +4,7 @@
     <body>
       <trans-unit id="Words DVT Books" datatype="html">
         <source>DVT Books</source>
+        <target>Izincwadi ze-DVT</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
           <context context-type="linenumber">8</context>
@@ -17,6 +18,8 @@
     DVT&apos;s personal book library where you can find many programming books , on
     many different topics.
   </source>
+  <target>Ilabhulali yencwadi yomuntu siqu ye-DVT lapho ungathola khona izincwadi eziningi zokuhlela, ivuliwe
+    izihloko eziningi ezahlukene.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
           <context context-type="linenumber">13</context>
@@ -30,6 +33,7 @@
         <source>
         Services
       </source>
+        <target>Izinsizakalo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/users-page.component.html</context>
           <context context-type="linenumber">12</context>
@@ -44,6 +48,9 @@
               specific book , as well as add books and edit already exisiting
               books in the database.
             </source>
+            <target>Ukuphatha uzokwazi ukubuka zonke izincwadi ku-database, buka a
+              incwadi ethile, kanye nokungeza izincwadi nokuhlela okuvele kokunye okuthengiwe
+              izincwadi database.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/users-page.component.html</context>
           <context context-type="linenumber">27</context>
@@ -59,6 +66,9 @@
               a specific authors information , as well as add authors and edit
               already exisiting authors in the database.
             </source>
+            <target>Ukuphatha uzokwazi ukubuka bonke ababhali ku-database, buka
+              imininingwane ethile yababhali, kanye nokwengeza ababhali nokuhlela
+              isivele ihlola ababhali database.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/users-page.component.html</context>
           <context context-type="linenumber">45</context>
@@ -70,6 +80,7 @@
       </trans-unit>
       <trans-unit id="Words Author Header" datatype="html">
         <source>Authors</source>
+        <target>Ababhali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/header/header.component.html</context>
           <context context-type="linenumber">19</context>
@@ -79,6 +90,7 @@
       </trans-unit>
       <trans-unit id="Words Books Header" datatype="html">
         <source>Books</source>
+        <target>Izincwadi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/header/header.component.html</context>
           <context context-type="linenumber">27</context>
@@ -88,6 +100,7 @@
       </trans-unit>
       <trans-unit id="Words Tags Header" datatype="html">
         <source>Tags</source>
+        <target>Amathegi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/header/header.component.html</context>
           <context context-type="linenumber">35</context>
@@ -99,6 +112,7 @@
         <source>
         Logout
       </source>
+      <target>Phuma</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/header/header.component.html</context>
           <context context-type="linenumber">43</context>
@@ -107,7 +121,7 @@
         <note priority="1" from="meaning">Logout Header</note>
       </trans-unit>
       <trans-unit id="Words Add Author Pill" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Add an Author</source>
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Add an Author</source><target>Faka Umbhali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/author.component.html</context>
           <context context-type="linenumber">16</context>
@@ -116,7 +130,7 @@
         <note priority="1" from="meaning">Add Author Pill</note>
       </trans-unit>
       <trans-unit id="Words Edit Author Pill" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Update/Edit an Author</source>
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Update/Edit an Author</source><target>Vuselela / Hlela Umbhali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/author.component.html</context>
           <context context-type="linenumber">29</context>
@@ -126,7 +140,7 @@
       </trans-unit>
       <trans-unit id="Words Delete Author Pill" datatype="html">
         <source>
-        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Delete an Author</source>
+        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Delete an Author</source><target>Susa Umbhali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/author.component.html</context>
           <context context-type="linenumber">43</context>
@@ -137,7 +151,7 @@
       </trans-unit>
       <trans-unit id="Words View Author Pill" datatype="html">
         <source>
-        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> View Authors</source>
+        <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> View Authors</source><target>Bheka Ababhali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/author.component.html</context>
           <context context-type="linenumber">57</context>
@@ -148,8 +162,9 @@
       <trans-unit id="Words Welcome
             Page User Words" datatype="html">
         <source>
-          Welcome :
+          Welcome
         </source>
+        <target>Uyemukelwa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/welcome-page/welcome-page.component.html</context>
           <context context-type="linenumber">15</context>
@@ -163,6 +178,7 @@
         <source>
             Add , Search , Update , and Delete books!
           </source>
+          <target>Ngeza, Sesha, Vuselela, futhi Susa izincwadi!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/welcome-page/welcome-page.component.html</context>
           <context context-type="linenumber">24</context>
@@ -174,7 +190,10 @@
       <trans-unit id="Words Welcome Page User" datatype="html">
         <source>
             View book information and search for books!
-          </source>
+          </source>   
+          <target>
+            Buka imininingwane yebhuku futhi useshe izincwadi!
+          </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/welcome-page/welcome-page.component.html</context>
           <context context-type="linenumber">32</context>
@@ -186,6 +205,7 @@
       <trans-unit id="Words Edit Author
                 Select" datatype="html">
         <source>Select an Author :</source>
+        <target>Khetha Umbhali:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
           <context context-type="linenumber">11</context>
@@ -195,7 +215,7 @@
                 Edit Author Select</note>
       </trans-unit>
       <trans-unit id="Words Edit Author Firstname Input" datatype="html">
-        <source>Firstname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <source>Firstname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source><target>Igama :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
           <context context-type="linenumber">37</context>
@@ -206,7 +226,7 @@
                     Edit Author Firstname Input</note>
       </trans-unit>
       <trans-unit id="Words Edit Author Middlename Input" datatype="html">
-        <source>Middlename :</source>
+        <source>Middlename :</source><target>Igama lakho :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
           <context context-type="linenumber">61</context>
@@ -217,7 +237,7 @@
                     Edit Author Middlename Input</note>
       </trans-unit>
       <trans-unit id="Words Edit Author Lastname Input" datatype="html">
-        <source>Lastname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <source>Lastname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source><target>Isibongo :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
           <context context-type="linenumber">75</context>
@@ -229,7 +249,7 @@
       </trans-unit>
       <trans-unit id="Words
                     Edit Author About Input" datatype="html">
-        <source>About the Author :</source>
+        <source>About the Author :</source><target>Mayelana noMlobi :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
           <context context-type="linenumber">99</context>
@@ -242,7 +262,7 @@
                     Author Button" datatype="html">
         <source>
                   Update Author
-                </source>
+                </source><target>Vuselela Umbhali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/edit-authors/edit-authors.component.html</context>
           <context context-type="linenumber">116</context>
@@ -253,7 +273,7 @@
       </trans-unit>
       <trans-unit id="Words
                   Author Firstname Input" datatype="html">
-        <source>Firstname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <source>Firstname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source><target>Igama</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/add-authors/add-authors.component.html</context>
           <context context-type="linenumber">16</context>
@@ -264,7 +284,7 @@
       </trans-unit>
       <trans-unit id="Words
                   Author Middlename Input" datatype="html">
-        <source>Middlename :</source>
+        <source>Middlename :</source><target>Igama lakho :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/add-authors/add-authors.component.html</context>
           <context context-type="linenumber">38</context>
@@ -275,7 +295,7 @@
       </trans-unit>
       <trans-unit id="Words
                   Author Lastname Input" datatype="html">
-        <source>Lastname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <source>Lastname : <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source><target>Isibongo : </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/add-authors/add-authors.component.html</context>
           <context context-type="linenumber">51</context>
@@ -286,7 +306,7 @@
       </trans-unit>
       <trans-unit id="Words Author
                   About Input" datatype="html">
-        <source>About the Author :</source>
+        <source>About the Author :</source><target>Mayelana noMlobi :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/add-authors/add-authors.component.html</context>
           <context context-type="linenumber">73</context>
@@ -300,6 +320,7 @@
         <source>
                 Add Author
               </source>
+              <target>Faka Umbhali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/author/add-authors/add-authors.component.html</context>
           <context context-type="linenumber">89</context>
@@ -309,7 +330,7 @@
                   Add Author Button</note>
       </trans-unit>
       <trans-unit id="Words Add Book Pill" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Add a Book</source>
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Add a Book</source><target>Faka Incwadi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/book.component.html</context>
           <context context-type="linenumber">15</context>
@@ -318,7 +339,7 @@
         <note priority="1" from="meaning">Add Book Pill</note>
       </trans-unit>
       <trans-unit id="Words Update Book Pill" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Update a Book</source>
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Update a Book</source><target>Vuselela Incwadi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/book.component.html</context>
           <context context-type="linenumber">28</context>
@@ -328,7 +349,7 @@
       </trans-unit>
       <trans-unit id="Words Delete Book Pill" datatype="html">
         <source>
-      <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Delete a Book</source>
+      <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Delete a Book</source><target>Susa Incwadi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/book.component.html</context>
           <context context-type="linenumber">41</context>
@@ -338,7 +359,7 @@
       </trans-unit>
       <trans-unit id="Words View Book Pill" datatype="html">
         <source>
-      <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> View Books</source>
+      <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> View Books</source><target>Bheka Izincwadi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/book.component.html</context>
           <context context-type="linenumber">55</context>
@@ -350,6 +371,7 @@
                   Input" datatype="html">
         <source>Upload an image
               </source>
+              <target>Faka isithombe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">16</context>
@@ -363,6 +385,7 @@
         <source>
                 Select File
               </source>
+              <target>Khetha Ifayela</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">37</context>
@@ -375,6 +398,7 @@
                       ISBN10 Input" datatype="html">
         <source>ISBN10 Number <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
                   </source>
+                  <target>Inombolo ye-ISBN10</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">49</context>
@@ -387,6 +411,7 @@
                       ISBN13 Input" datatype="html">
         <source>ISBN 13 Number <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
                   </source>
+                  <target>I-ISBN 13 Inombolo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">85</context>
@@ -399,6 +424,7 @@
                       Input" datatype="html">
         <source>Title <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
                   </source>
+                  <target>Isihloko</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">118</context>
@@ -411,6 +437,7 @@
                       Author Input" datatype="html">
         <source>Author
                   </source>
+                  <target>Umbhali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">142</context>
@@ -423,6 +450,7 @@
                       Abstract Input" datatype="html">
         <source>Abstract
                   </source>
+                  <target>I-Abstract</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">159</context>
@@ -435,6 +463,7 @@
                       Book Publisher Input" datatype="html">
         <source>Publisher
                   </source>
+                  <target>Umshicileli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">175</context>
@@ -446,6 +475,7 @@
       <trans-unit id="Words Book Date Published Input" datatype="html">
         <source>Date Published
                   </source>
+                  <target>Usuku Lushicilelwe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">190</context>
@@ -459,6 +489,7 @@
                       Input" datatype="html">
         <source>Tags
                   </source>
+                  <target>Amathegi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">205</context>
@@ -471,6 +502,7 @@
                       Input" datatype="html">
         <source>About
                   </source>
+                  <target>Cishe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">221</context>
@@ -483,6 +515,7 @@
         <source>
                   Add Book
                 </source>
+                <target>Faka Incwadi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/add-books/add-books.component.html</context>
           <context context-type="linenumber">238</context>
@@ -493,6 +526,7 @@
       </trans-unit>
       <trans-unit id="Words Edit Book Select" datatype="html">
         <source>Select a Book :</source>
+        <target>Khetha incwadi :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">10</context>
@@ -505,6 +539,7 @@
                     Image Update" datatype="html">
         <source>Select image to update :
                 </source>
+                <target>Khetha isithombe ongasibuyekeza : </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">36</context>
@@ -518,6 +553,7 @@
         <source>
                   Select File
                 </source>
+                <target>Khetha Ifayela</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">56</context>
@@ -529,6 +565,7 @@
       <trans-unit id="Words Edit Book ISBN10 Input" datatype="html">
         <source>ISBN10 Number <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
                     </source>
+                    <target>I-ISBN 10 Inombolo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">68</context>
@@ -541,6 +578,7 @@
       <trans-unit id="Words Edit Book ISBN13 Input" datatype="html">
         <source>ISBN 13 Number <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
                     </source>
+                    <target>I-ISBN 13 Inombolo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">103</context>
@@ -554,6 +592,7 @@
                         Edit Book Title Input" datatype="html">
         <source>Title <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>*<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
                     </source>
+                    <target>Isihloko</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">137</context>
@@ -565,6 +604,7 @@
       <trans-unit id="Words Edit Book Author Input" datatype="html">
         <source>Author
                     </source>
+                    <target>Umbhali</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">162</context>
@@ -577,6 +617,7 @@
       <trans-unit id="Words Edit Book Abstract Input" datatype="html">
         <source>Abstract
                     </source>
+                    <target>I-Abstract</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">184</context>
@@ -589,6 +630,7 @@
       <trans-unit id="Words Edit Book Publisher Input" datatype="html">
         <source>Publisher
                     </source>
+                    <target>Umshicileli</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">201</context>
@@ -601,6 +643,7 @@
       <trans-unit id="Words Edit Book Date Publishe Input" datatype="html">
         <source>Date Published
                     </source>
+                    <target>Usuku Lushicilelwe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">217</context>
@@ -614,6 +657,7 @@
                         Edit Book Tags Input" datatype="html">
         <source>Tags
                     </source>
+                    <target>Amathegi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">233</context>
@@ -626,6 +670,7 @@
                         Edit Book About Input" datatype="html">
         <source>About
                     </source>
+                    <target>Cishe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">248</context>
@@ -639,6 +684,7 @@
         <source>
                     Update Book
                   </source>
+                  <target>Vuselela Incwadi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/users-page/book/edit-books/edit-books.component.html</context>
           <context context-type="linenumber">267</context>
@@ -652,6 +698,7 @@
         <source>
       Written by :
     </source>
+    <target>Ibhalwe ngu :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book-profile/book-profile.component.html</context>
           <context context-type="linenumber">10</context>
@@ -665,6 +712,7 @@
         <source>
         Book Details :
       </source>
+      <target>Imininingwane Yencwadi :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book-profile/book-profile.component.html</context>
           <context context-type="linenumber">40</context>
@@ -676,6 +724,7 @@
       <trans-unit id="Words Publisher Heading" datatype="html">
         <source>Publisher :
         </source>
+        <target>Umshicileli :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book-profile/book-profile.component.html</context>
           <context context-type="linenumber">47</context>
@@ -688,6 +737,7 @@
             Published Heading" datatype="html">
         <source>Date Published :
         </source>
+        <target>Usuku Lushicilelwe :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book-profile/book-profile.component.html</context>
           <context context-type="linenumber">55</context>
@@ -701,6 +751,7 @@
         <source>
     Related Books
   </source>
+  <target>Izincwadi Ezihlobene</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book-profile/book-profile.component.html</context>
           <context context-type="linenumber">73</context>
