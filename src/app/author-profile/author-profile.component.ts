@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AuthorService } from '../services/author.service';
 import { Author } from '../models/author';
+import { Book } from '../models/book';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-author-profile',
@@ -11,10 +13,13 @@ import { Author } from '../models/author';
 export class AuthorProfileComponent implements OnInit {
   authorID: string;
   authorInfo: Author = null;
+  books: Book[] = [];
+  bookISBN: string[];
 
   constructor(
     private route: ActivatedRoute,
-    private authorService: AuthorService
+    private authorService: AuthorService,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -25,5 +30,9 @@ export class AuthorProfileComponent implements OnInit {
     this.authorService.getAuthor(this.authorID).subscribe((x) => {
       this.authorInfo = x;
     });
+  }
+
+  backClicked() {
+    this.location.back();
   }
 }

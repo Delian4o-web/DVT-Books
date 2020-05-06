@@ -12,5 +12,12 @@
   border-color: white;
 }
 
+button {
+  width: 100%;
+  color: white;
+  background-color: $blue;
+  border-color: $blue;
+}
+
 @media screen and (max-width: 570px) {
 }
