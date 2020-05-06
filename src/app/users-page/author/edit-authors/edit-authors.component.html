@@ -11,8 +11,8 @@
               >Select an Author :</label
             >
             <select
-              (click)="getVal()"
-              class="form-control"
+              (click)="getAuthor()"
+              class="form-control select"
               [(ngModel)]="selectedGroup"
             >
               <option *ngFor="let author of authorsList" [ngValue]="author">{{

@@ -10,7 +10,7 @@ describe('EditAuthorsComponent', () => {
   let component: EditAuthorsComponent;
   let fixture: ComponentFixture<EditAuthorsComponent>;
   let de: DebugElement;
-  let selectEl: DebugElement;
+  let el: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -23,7 +23,7 @@ describe('EditAuthorsComponent', () => {
     component.ngOnInit();
 
     de = fixture.debugElement.query(By.css('form'));
-    selectEl = fixture.debugElement.query(By.css('select'));
+    el = de.nativeElement;
   }));
 
   beforeEach(() => {
@@ -33,6 +33,14 @@ describe('EditAuthorsComponent', () => {
     fixture.detectChanges();
   });
 
+  // it('should test input errors', () => {
+  //   const firstNameInput = component.registerUpdateFormControl.first_name;
+  //   expect(firstNameInput.errors.required).toBeTruthy();
+
+  //   firstNameInput.setValue('Delyan');
+  //   expect(firstNameInput.errors).toBeNull();
+  // });
+
   // it('form valid when input is entered', () => {
   //   const firstNameInput = component.registerUpdateFormControl.first_name;
   //   firstNameInput.setValue('Delyan');
@@ -41,13 +49,5 @@ describe('EditAuthorsComponent', () => {
   //   lastNameInput.setValue('Georgiev');
 
   //   expect(component.registerUpdateFormControl.valid).toBeTruthy();
-  // });
-
-  // it('should test input errors', () => {
-  //   const firstNameInput = component.registerUpdateFormControl.first_name;
-  //   expect(firstNameInput.errors.required).toBeTruthy();
-
-  //   firstNameInput.setValue('Delyan');
-  //   expect(firstNameInput.errors).toBeNull();
   // });
 });

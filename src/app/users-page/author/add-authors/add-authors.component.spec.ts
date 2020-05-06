@@ -32,6 +32,21 @@ describe('AddAuthorsComponent', () => {
     fixture.detectChanges();
   });
 
+  it('should make field required', () => {
+    const firstNameInput =
+      authorComponent.registerAuthorForm.controls.first_name;
+    expect(firstNameInput.errors.required).toBeTruthy();
+
+    firstNameInput.setValue('John');
+    expect(firstNameInput.errors).toBeNull();
+  });
+
+  it('form should be invalid when empty', () => {
+    authorComponent.registerAuthorForm.controls.first_name.setValue('');
+    authorComponent.registerAuthorForm.controls.last_name.setValue('');
+    expect(authorComponent.registerAuthorForm.valid).toBeFalsy();
+  });
+
   it('form valid when input is entered', () => {
     const firstNameInput = authorComponent.registerFormControl.first_name;
     firstNameInput.setValue('Delyan');
