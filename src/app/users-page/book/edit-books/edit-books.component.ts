@@ -11,6 +11,7 @@ import { TagService } from 'src/app/services/tag.service';
 import { Author } from 'src/app/models/author';
 import { Tag } from 'src/app/models/tag';
 import { Book } from 'src/app/models/book';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-edit-books',
@@ -28,6 +29,8 @@ export class EditBooksComponent implements OnInit {
   selectedISBNNo: string;
   bookInfoUpdate: Book;
   bookISBNNumber: string;
+  selectedFile: File;
+  // selectedTags: { id: string; href: string; description: string }[] = [];
 
   constructor(
     private fb: FormBuilder,
@@ -87,6 +90,10 @@ export class EditBooksComponent implements OnInit {
     });
   }
 
+  onFileChanged(event) {
+    this.selectedFile = event.target.files[0];
+  }
+
   updateBook() {
     this.bookInfoUpdate = this.updateBookForm.value;
     this.bookInfoUpdate.author = this.authorsList.find(
@@ -96,8 +103,9 @@ export class EditBooksComponent implements OnInit {
       (x) => x.id === this.tags.value
     );
 
-    this.bookISBNNumber = this.isbnNumber.value;
+    this.bookInfoUpdate.image = this.selectedFile;
 
+    this.bookISBNNumber = this.isbnNumber.value;
     this.bookService
       .updateBook(this.bookISBNNumber, this.bookInfoUpdate)
       .subscribe();

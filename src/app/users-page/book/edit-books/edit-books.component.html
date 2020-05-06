@@ -38,6 +38,7 @@
                 <input
                   style="display: none;"
                   type="file"
+                  (change)="onFileChanged($event)"
                   accept="image/bmp,image/gif,image/jpeg,image/png"
                   autocomplete="none"
                   autocorrect="off"
