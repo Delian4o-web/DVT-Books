@@ -41,14 +41,10 @@ export class BookService {
     );
   }
 
-  updateBookPicture(
-    isbn13: string,
-    bookToUpdate: Book,
-    newImage: File
-  ): Observable<Book> {
+  updateBookPicture(isbn13: string, imageFile: File): Observable<Book> {
     return this.http.put<Book>(
       `${environment.apiUri}/Books/${isbn13}/picture`,
-      bookToUpdate
+      imageFile
     );
   }
 
