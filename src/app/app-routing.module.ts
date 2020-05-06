@@ -26,7 +26,8 @@ export const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'profile', component: UsersPageComponent, canActivate: [AuthGuard] },
-  { path: '**', component: PageNotFoundComponent },
+  { path: '', redirectTo: 'profile', pathMatch: 'full' },
+  { path: '**', component: UsersPageComponent },
 ];
 
 @NgModule({
