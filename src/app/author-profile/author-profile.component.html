@@ -5,6 +5,9 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+          <button (click)="backClicked()" type="submit" class="btn">
+            Back</button
+          ><br /><br />
           <img
             alt="Author Pic"
             src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
@@ -18,7 +21,14 @@
           </div>
           <hr />
           <div class="container details">
-            {{ authorInfo.about }}
+            {{ authorInfo.about }} <br /><br />
+
+            <h4>Books written :</h4>
+            <div *ngFor="let book of authorInfo.books">
+              <a href="http://localhost:4200/book/{{ book.isbn13 }}">{{
+                book.title
+              }}</a>
+            </div>
           </div>
         </div>
       </div>
