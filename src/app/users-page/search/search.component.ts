@@ -37,13 +37,12 @@ export class SearchComponent implements OnInit {
     this.bookService
       .getBookListPaginated(this.searchString, this.top, this.skip)
       .subscribe((x) => {
-        x.forEach((element) => {
-          this.books.push(element);
-        });
-
         if (x.length < 3) {
           this.loadMore = false;
         }
+        x.forEach((element) => {
+          this.books.push(element);
+        });
       });
     this.loadMore = true;
   }

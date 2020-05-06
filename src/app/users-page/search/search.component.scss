@@ -143,6 +143,13 @@ a {
   left: 80%;
 }
 
+button {
+  width: 10%;
+  color: white;
+  background-color: $blue;
+  border-color: $blue;
+}
+
 @media screen and (max-width: 570px) {
   .searchbox input {
     width: 155%;
