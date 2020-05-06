@@ -8,6 +8,7 @@ import { AuthorProfileComponent } from './author-profile/author-profile.componen
 import { AuthorComponent } from './users-page/author/author.component';
 import { BookComponent } from './users-page/book/book.component';
 import { AuthGuard } from './auth/auth.guard';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -25,7 +26,7 @@ export const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'profile', component: UsersPageComponent, canActivate: [AuthGuard] },
-  { path: '**', redirectTo: 'profile', canActivate: [AuthGuard] },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
