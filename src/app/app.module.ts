@@ -24,6 +24,7 @@ import { ViewBooksComponent } from './users-page/book/view-books/view-books.comp
 import { BookProfileComponent } from './book-profile/book-profile.component';
 import { AuthorProfileComponent } from './author-profile/author-profile.component';
 import { ImagepreloadDirective } from './directives/imagepreload.directive';
+import { SearchComponent } from './users-page/search/search.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ImagepreloadDirective } from './directives/imagepreload.directive';
     BookProfileComponent,
     AuthorProfileComponent,
     ImagepreloadDirective,
+    SearchComponent,
   ],
   imports: [
     HttpClientModule,
