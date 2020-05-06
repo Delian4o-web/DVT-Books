@@ -23,6 +23,15 @@
           <br />
 
           <div *ngIf="chosenBook">
+            <div
+              class="imagePreview"
+              *ngIf="previewUrl"
+              style="text-align: center;"
+            >
+              <img [src]="previewUrl" height="200" /> <br />
+            </div>
+            <br />
+
             <form
               class="form"
               [formGroup]="updateBookForm"
@@ -72,7 +81,6 @@
                       type="text"
                       class="form-control"
                       formControlName="isbn10"
-                      placeholder="{{ chosenBook.isbn10 }}"
                     />
 
                     <span
@@ -107,7 +115,6 @@
                       type="text"
                       class="form-control"
                       formControlName="isbn13"
-                      placeholder="{{ chosenBook.isbn13 }}"
                     />
                     <span
                       class="text-danger"
@@ -141,7 +148,6 @@
                       type="text"
                       class="form-control"
                       formControlName="title"
-                      placeholder="{{ chosenBook.title }}"
                     />
                     <span
                       class="text-danger"
@@ -188,7 +194,6 @@
                       class="form-control"
                       formControlName="about"
                       rows="6"
-                      placeholder="{{ chosenBook.abstract }}"
                     ></textarea>
                   </div>
                   <br />
@@ -205,7 +210,6 @@
                       type="text"
                       class="form-control"
                       formControlName="publisher"
-                      placeholder="{{ chosenBook.publisher }}"
                     />
                   </div>
                   <br />
@@ -221,7 +225,6 @@
                       type="date"
                       class="form-control"
                       formControlName="date_published"
-                      placeholder="{{ chosenBook.date_published }}"
                     />
                   </div>
                   <br />
@@ -252,7 +255,6 @@
                       class="form-control"
                       formControlName="about"
                       rows="11"
-                      placeholder="{{ chosenBook.about }}"
                     ></textarea>
                   </div>
                   <br />

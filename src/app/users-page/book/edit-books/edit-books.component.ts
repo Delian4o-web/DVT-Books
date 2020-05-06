@@ -11,7 +11,6 @@ import { TagService } from 'src/app/services/tag.service';
 import { Author } from 'src/app/models/author';
 import { Tag } from 'src/app/models/tag';
 import { Book } from 'src/app/models/book';
-import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-edit-books',
@@ -30,7 +29,8 @@ export class EditBooksComponent implements OnInit {
   bookInfoUpdate: Book;
   bookISBNNumber: string;
   selectedFile: File;
-  // selectedTags: { id: string; href: string; description: string }[] = [];
+  previewUrl: any = null;
+  reader;
 
   constructor(
     private fb: FormBuilder,
@@ -87,11 +87,30 @@ export class EditBooksComponent implements OnInit {
 
     this.bookService.getBook(this.selectedISBNNo).subscribe((x) => {
       this.chosenBook = x;
+
+      this.updateBookForm.patchValue({
+        isbn10: this.chosenBook.isbn10,
+        isbn13: this.chosenBook.isbn13,
+        title: this.chosenBook.title,
+        about: this.chosenBook.about,
+        abstract: this.chosenBook.abstract,
+        publisher: this.chosenBook.publisher,
+        date_published: this.chosenBook.date_published,
+        author: this.authorsList.find(
+          (author) => author.id === this.chosenBook.author.id
+        ).id,
+      });
     });
   }
 
   onFileChanged(event) {
     this.selectedFile = event.target.files[0];
+    this.reader = new FileReader();
+
+    this.reader.readAsDataURL(this.selectedFile);
+    this.reader.onload = (_event) => {
+      this.previewUrl = this.reader.result;
+    };
   }
 
   updateBook() {
@@ -103,20 +122,26 @@ export class EditBooksComponent implements OnInit {
       (x) => x.id === this.tags.value
     );
 
-    this.bookInfoUpdate.image = this.selectedFile;
+    // this.bookInfoUpdate.image = this.previewUrl;
 
     this.bookISBNNumber = this.isbnNumber.value;
-    this.bookService
-      .updateBook(this.bookISBNNumber, this.bookInfoUpdate)
-      .subscribe();
 
-    alert(this.bookInfoUpdate.title + ' updated!');
-    window.location.reload();
+    // this.bookService
+    //   .updateBook(this.bookISBNNumber, this.bookInfoUpdate)
+    //   .subscribe((x) => {
+    //     this.bookService.updateBookPicture(
+    //       this.bookISBNNumber,
+    //       this.selectedFile
+    //     );
+    //   });
+
+    // alert(this.bookInfoUpdate.title + ' updated!');
+    // window.location.reload();
   }
 
   onSubmit() {
     this.submitted = true;
-    if (this.updateBookForm.valid) {
+    if (this.updateBookForm.valid && this.previewUrl) {
       this.updateBook();
     }
   }
