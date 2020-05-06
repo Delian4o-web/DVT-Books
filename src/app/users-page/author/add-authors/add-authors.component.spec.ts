@@ -4,6 +4,12 @@ import { ReactiveFormsModule, FormBuilder, FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { Author } from 'src/app/models/author';
+import { AuthorService } from '../../../services/author.service';
+
+class MockService {
+  addAuthor() {}
+}
 
 describe('AddAuthorsComponent', () => {
   let authorComponent: AddAuthorsComponent;
@@ -15,6 +21,12 @@ describe('AddAuthorsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [AddAuthorsComponent],
       imports: [ReactiveFormsModule, FormsModule, HttpClientModule],
+      providers: [
+        {
+          AuthorService,
+          useValue: MockService,
+        },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AddAuthorsComponent);

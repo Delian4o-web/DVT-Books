@@ -52,4 +52,20 @@ export class BookService {
     this.searchUrl = environment.apiUri + '/Books?query=' + query;
     return this.http.get<Book[]>(this.searchUrl);
   }
+
+  getBookListPaginated(
+    query: string,
+    top: number,
+    skip: number
+  ): Observable<Book[]> {
+    this.searchUrl =
+      environment.apiUri +
+      '/Books?query=' +
+      query +
+      '&top=' +
+      top +
+      '&skip=' +
+      skip;
+    return this.http.get<Book[]>(this.searchUrl);
+  }
 }

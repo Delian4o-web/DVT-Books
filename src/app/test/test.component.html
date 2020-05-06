@@ -1,6 +1,37 @@
 <app-header></app-header><br /><br />
 <app-welcome-page></app-welcome-page>
 
-<!-- <app-author></app-author> -->
-<!-- <app-book></app-book> -->
-<!-- <app-book-profile></app-book-profile> -->
+<div class="container">
+  <div class="searchbox">
+    <input
+      type="text"
+      placeholder="Search for books"
+      class="search"
+      [(ngModel)]="searchString"
+      (keyup)="searchBooks()"
+    /><i class="fa fa-search"></i>
+  </div>
+  <br /><br />
+  <main class="grid">
+    <article class="card" *ngFor="let book of books">
+      <div class="content">
+        <div class="content-overlay"></div>
+        <img
+          src="{{ book.image }}"
+          default="https://addisoninc.co.za/wp-content/themes/consultix/images/no-image-found-360x260.png"
+          class="img-fluid content-image"
+          alt="Sample photo"
+          style="max-width: 360px; max-height: 260;"
+        />
+        <div class="content-details fadeIn-bottom">
+          <h3 class="content-title">
+            <a [routerLink]="['/book', book.isbn13]">{{ book.title }}</a>
+          </h3>
+          <p class="content-text">{{ book.author.name }}</p>
+        </div>
+      </div>
+    </article>
+  </main>
+</div>
+
+<button *ngIf="loadMore" (click)="viewMoreBooks()">View More</button>
