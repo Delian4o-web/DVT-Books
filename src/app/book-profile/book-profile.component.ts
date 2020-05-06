@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Book } from '../models/book';
 import { BookService } from '../services/book.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-book-profile',
@@ -15,7 +16,8 @@ export class BookProfileComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private bookService: BookService
+    private bookService: BookService,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -29,7 +31,10 @@ export class BookProfileComponent implements OnInit {
 
     this.bookService.getBookPicture(this.bookISBN).subscribe((x) => {
       this.book = x;
-      console.log(this.book);
     });
+  }
+
+  backClicked() {
+    this.location.back();
   }
 }

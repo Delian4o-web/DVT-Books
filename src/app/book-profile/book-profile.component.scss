@@ -43,6 +43,13 @@
   top: 0;
 }
 
+button {
+  width: 20%;
+  color: white;
+  background-color: $blue;
+  border-color: $blue;
+}
+
 @media screen and (max-width: 600px) {
   .container,
   .tags > h1 {
