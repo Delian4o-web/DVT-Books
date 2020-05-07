@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from './../../environments/environment';
 import { Book } from '../models/book';
-import { map, tap } from 'rxjs/operators';
+import { map, tap, delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -20,8 +20,13 @@ export class BookService {
     return this.http.get<Book>(`${environment.apiUri}/Books/${isbn13}`);
   }
 
-  addBookPicture(isbn: string, file: File) {
-    return this.http.put(`${environment.apiUri}/Books/${isbn}/picture`, file);
+  addBookPicture(isbn: string, file: File, delayDuration: number) {
+    return this.http
+      .put(`${environment.apiUri}/Books/${isbn}/picture`, file)
+      .pipe(
+        tap((data) => console.log('Image added :' + data)),
+        delay(delayDuration)
+      );
   }
 
   getBookPicture(isbn: string) {
@@ -29,9 +34,7 @@ export class BookService {
   }
 
   addBook(book: Book): Observable<Book> {
-    return this.http
-      .post<Book>(`${environment.apiUri}/Books`, book)
-      .pipe(tap((data) => console.log('Book added :' + data)));
+    return this.http.post<Book>(`${environment.apiUri}/Books`, book);
   }
 
   updateBook(isbn13: string, bookToUpdate: Book): Observable<Book> {
