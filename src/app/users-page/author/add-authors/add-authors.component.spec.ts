@@ -5,6 +5,8 @@ import { Author } from 'src/app/models/author';
 import { AuthorService } from '../../../services/author.service';
 import { Observable } from 'rxjs';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { DebugElement } from '@angular/core';
+import { BrowserModule, By } from '@angular/platform-browser';
 
 class MockService {
   addAuthor(): Observable<Author[]> {
@@ -19,7 +21,12 @@ describe('AddAuthorsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AddAuthorsComponent],
-      imports: [ReactiveFormsModule, FormsModule, HttpClientTestingModule],
+      imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientTestingModule,
+      ],
       providers: [
         {
           AuthorService,
