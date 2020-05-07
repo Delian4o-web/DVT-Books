@@ -99,8 +99,15 @@ export class AddBooksComponent implements OnInit {
   addBook() {
     this.book = this.registerBookForm.value;
     this.book.author = this.authorsList.find((x) => x.id === this.author.value);
-    this.selectedTags = [this.tagsList.find((x) => x.id === this.tags.value)];
-    this.book.tags = this.selectedTags;
+
+    for (let index = 0; index <= this.tags.value.length - 1; index++) {
+      const selected = this.tagsList.find(
+        (x) => x.id === this.tags.value[index]
+      );
+      this.selectedTags.push(selected);
+      this.book.tags = this.selectedTags;
+      console.log(selected);
+    }
 
     this.bookISBNNumber = this.isbnNumber.value;
 
