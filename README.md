@@ -18,17 +18,19 @@ An Book Management application where users will be able to search for books , vi
 
 ## Functionality
 
-- [ ] Build components and services
-- [ ] Authentication using OAuth & OpenID Connect (OIDC)
-- [ ] Consuming the REST API
-- [ ] Using server-side filtering
+- [x] Build components and services
+- [x] Authentication using OAuth & OpenID Connect (OIDC)
+- [x] Consuming the REST API
+- [x] Using server-side filtering
 - [ ] Formatting field values
-- [ ] Input validation
-- [ ] Unit tests using Karma & Jasmine
-- [ ] Internationalization (i18n)
-- [ ] Reactive Programming using Rx and Observables
-- [ ] Server-side pagination
-- [ ] Loaded data & assets from cache when offline (PWA)
-- [ ] Docker in an Angular web application
+- [x] Input validation
+- [x] Unit tests using Karma & Jasmine
+- [x] Internationalization (i18n)
+- [x] Reactive Programming using Rx and Observables
+- [x] Server-side pagination
+- [x] Loaded data & assets from cache when offline (PWA)
+- [x] Docker in an Angular web application
 
 ## Screenshots
+
+## Home Page (Desktop and Mobile View)
