@@ -106,7 +106,7 @@ export class AddBooksComponent implements OnInit {
 
     this.bookService.addBook(this.book).subscribe((x) => {
       this.bookService
-        .addBookPicture(this.bookISBNNumber, this.selectedFile)
+        .addBookPicture(this.bookISBNNumber, this.selectedFile, 3000)
         .subscribe();
     });
 
