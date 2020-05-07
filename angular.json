@@ -120,7 +120,10 @@
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
-            "codeCoverageExclude": ["src/app/services/auth.service.ts"],
+            "codeCoverageExclude": [
+              "src/app/services/auth.service.ts",
+              "src/app/auth/auth.guard.ts"
+            ],
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
