@@ -1,9 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AddAuthorsComponent } from './add-authors.component';
 import { ReactiveFormsModule, FormBuilder, FormsModule } from '@angular/forms';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { Author } from 'src/app/models/author';
 import { AuthorService } from '../../../services/author.service';
 import { Observable } from 'rxjs';
@@ -18,8 +15,6 @@ class MockService {
 describe('AddAuthorsComponent', () => {
   let authorComponent: AddAuthorsComponent;
   let fixture: ComponentFixture<AddAuthorsComponent>;
-  let de: DebugElement;
-  let el: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -36,9 +31,6 @@ describe('AddAuthorsComponent', () => {
     fixture = TestBed.createComponent(AddAuthorsComponent);
     authorComponent = fixture.componentInstance;
     authorComponent.ngOnInit();
-
-    de = fixture.debugElement.query(By.css('form'));
-    el = de.nativeElement;
   }));
 
   beforeEach(() => {
