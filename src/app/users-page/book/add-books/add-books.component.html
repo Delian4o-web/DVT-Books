@@ -205,7 +205,7 @@
                     >Tags
                   </label>
 
-                  <select class="form-control" formControlName="tags">
+                  <select class="form-control" formControlName="tags" multiple>
                     <option *ngFor="let tag of tagsList" [value]="tag.id">{{
                       tag.description
                     }}</option>

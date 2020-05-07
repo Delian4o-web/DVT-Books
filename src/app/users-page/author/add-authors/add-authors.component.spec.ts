@@ -6,21 +6,26 @@ import { DebugElement } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { Author } from 'src/app/models/author';
 import { AuthorService } from '../../../services/author.service';
+import { Observable } from 'rxjs';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 class MockService {
-  addAuthor() {}
+  addAuthor(): Observable<Author[]> {
+    return {} as Observable<Author[]>;
+  }
 }
 
 describe('AddAuthorsComponent', () => {
   let authorComponent: AddAuthorsComponent;
   let fixture: ComponentFixture<AddAuthorsComponent>;
+  let service: MockService;
   let de: DebugElement;
   let el: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AddAuthorsComponent],
-      imports: [ReactiveFormsModule, FormsModule, HttpClientModule],
+      imports: [ReactiveFormsModule, FormsModule, HttpClientTestingModule],
       providers: [
         {
           AuthorService,
