@@ -1,10 +1,6 @@
 @import './bootstrap.scss';
 @import './_variables.scss';
-@import '~@ng-select/ng-select/themes/default.theme.css';
 
 .text-error {
   color: red;
 }
-
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
