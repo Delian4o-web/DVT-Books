@@ -21,9 +21,6 @@ describe('EditAuthorsComponent', () => {
     fixture = TestBed.createComponent(EditAuthorsComponent);
     component = fixture.componentInstance;
     component.ngOnInit();
-
-    de = fixture.debugElement.query(By.css('form'));
-    el = de.nativeElement;
   }));
 
   beforeEach(() => {
@@ -32,22 +29,4 @@ describe('EditAuthorsComponent', () => {
     component.ngOnInit();
     fixture.detectChanges();
   });
-
-  // it('should test input errors', () => {
-  //   const firstNameInput = component.registerUpdateFormControl.first_name;
-  //   expect(firstNameInput.errors.required).toBeTruthy();
-
-  //   firstNameInput.setValue('Delyan');
-  //   expect(firstNameInput.errors).toBeNull();
-  // });
-
-  // it('form valid when input is entered', () => {
-  //   const firstNameInput = component.registerUpdateFormControl.first_name;
-  //   firstNameInput.setValue('Delyan');
-
-  //   const lastNameInput = component.registerUpdateFormControl.last_name;
-  //   lastNameInput.setValue('Georgiev');
-
-  //   expect(component.registerUpdateFormControl.valid).toBeTruthy();
-  // });
 });

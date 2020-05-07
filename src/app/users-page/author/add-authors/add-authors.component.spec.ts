@@ -18,7 +18,6 @@ class MockService {
 describe('AddAuthorsComponent', () => {
   let authorComponent: AddAuthorsComponent;
   let fixture: ComponentFixture<AddAuthorsComponent>;
-  let service: MockService;
   let de: DebugElement;
   let el: HTMLElement;
 
