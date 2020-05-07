@@ -25,7 +25,6 @@ describe('AuthorProfileComponent', () => {
   let component: AuthorProfileComponent;
   let fixture: ComponentFixture<AuthorProfileComponent>;
   let service: MockService;
-  let httpMock: HttpTestingController;
 
   beforeEach(async(() => {
     service = new MockService();
