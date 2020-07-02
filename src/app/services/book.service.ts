@@ -9,8 +9,7 @@ import { map, tap, delay } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class BookService {
-  constructor(private http: HttpClient) {}
-  searchUrl: string;
+  constructor(private http: HttpClient) { }
 
   getAllBooks(): Observable<Book[]> {
     return this.http.get<Book[]>(`${environment.apiUri}/Books`);
@@ -23,9 +22,7 @@ export class BookService {
   addBookPicture(isbn: string, file: File, delayDuration: number) {
     return this.http
       .put(`${environment.apiUri}/Books/${isbn}/picture`, file)
-      .pipe(
-        tap((data) => console.log('Image added :' + data)),
-        delay(delayDuration)
+      .pipe(delay(delayDuration)
       );
   }
 
@@ -51,9 +48,10 @@ export class BookService {
     );
   }
 
-  getBookList(query: string): Observable<Book[]> {
-    this.searchUrl = environment.apiUri + '/Books?query=' + query;
-    return this.http.get<Book[]>(this.searchUrl);
+  getBooks(query: string): Observable<Book[]> {
+    let searchUrl = '';
+    searchUrl = environment.apiUri + '/Books?query=' + query;
+    return this.http.get<Book[]>(searchUrl);
   }
 
   getBookListPaginated(
@@ -61,7 +59,8 @@ export class BookService {
     top: number,
     skip: number
   ): Observable<Book[]> {
-    this.searchUrl =
+    let searchUrl = '';
+    searchUrl =
       environment.apiUri +
       '/Books?query=' +
       query +
@@ -69,6 +68,6 @@ export class BookService {
       top +
       '&skip=' +
       skip;
-    return this.http.get<Book[]>(this.searchUrl);
+    return this.http.get<Book[]>(searchUrl);
   }
 }

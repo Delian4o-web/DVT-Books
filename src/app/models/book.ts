@@ -9,6 +9,6 @@ export class Book {
   author: { href: string; id: string; name: string };
   publisher: string;
   date_published: Date;
-  image: File;
+  image?: File;
   tags: Tag[];
 }

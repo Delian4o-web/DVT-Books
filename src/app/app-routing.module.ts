@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { UsersPageComponent } from './users-page/users-page.component';
-import { TestComponent } from './test/test.component';
 import { BookProfileComponent } from './book-profile/book-profile.component';
 import { AuthorProfileComponent } from './author-profile/author-profile.component';
 import { AuthorComponent } from './users-page/author/author.component';
@@ -12,7 +11,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 export const routes: Routes = [
   { path: 'home', component: HomePageComponent },
-  { path: 'test', component: TestComponent },
   { path: 'author', component: AuthorComponent, canActivate: [AuthGuard] },
   { path: 'book', component: BookComponent, canActivate: [AuthGuard] },
   {
@@ -25,7 +23,7 @@ export const routes: Routes = [
     component: AuthorProfileComponent,
     canActivate: [AuthGuard],
   },
-  { path: 'profile', component: UsersPageComponent, canActivate: [AuthGuard] },
+  { path: 'profile', component: UsersPageComponent },
   { path: '', redirectTo: 'profile', pathMatch: 'full' },
   { path: '**', component: UsersPageComponent },
 ];
@@ -34,4 +32,4 @@ export const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

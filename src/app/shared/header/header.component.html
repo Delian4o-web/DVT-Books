@@ -1,0 +1,26 @@
+<nav class="sticky-top">
+  <div class="brand">
+    <a routerLink="/profile" target="_blank" class="logo">
+      <img src="../../assets/1.DVT_icon(RGB).png" alt="logo" />
+    </a>
+  </div>
+
+  <ul class="responsive-nav menu">
+    <li class="menu-item">
+      <a i18n="Author Header|Words Author Header@@Words Author Header" routerLink="/author" *ngIf="auth.isAdmin"
+        class="active">Authors</a>
+    </li>
+    <li class="menu-item">
+      <a i18n="Books Header|Words Books Header@@Words Books Header" *ngIf="auth.isAdmin" routerLink="/book">Books</a>
+    </li>
+    <li class="menu-item">
+      <a i18n="Tags Header|Words Tags Header@@Words Tags Header" *ngIf="auth.isAdmin" routerLink="/profile">Tags</a>
+    </li>
+    <li class="menu-item">
+      <button i18n="Logout Header|Words Logout Header@@Words Logout Header" (click)="auth.logout()"
+        class="btn btn-primary btn-primary-outline btn-pill">
+        Logout
+      </button>
+    </li>
+  </ul>
+</nav>

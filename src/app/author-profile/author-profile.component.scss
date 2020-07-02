@@ -19,5 +19,6 @@ button {
   border-color: $blue;
 }
 
-@media screen and (max-width: 570px) {
+.container {
+  padding-top: 60px;
 }

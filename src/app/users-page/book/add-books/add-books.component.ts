@@ -106,7 +106,6 @@ export class AddBooksComponent implements OnInit {
       );
       this.selectedTags.push(selected);
       this.book.tags = this.selectedTags;
-      console.log(selected);
     }
 
     this.bookISBNNumber = this.isbnNumber.value;

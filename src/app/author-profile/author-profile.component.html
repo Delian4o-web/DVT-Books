@@ -1,19 +1,13 @@
-<app-header></app-header><br /><br /><br /><br /><br /><br />
+<app-header></app-header>
 
 <div class="container">
   <div class="row">
     <div class="panel panel-default">
       <div class="panel-body">
-        <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-          <button (click)="backClicked()" type="submit" class="btn">
-            Back</button
-          ><br /><br />
-          <img
-            alt="Author Pic"
-            src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
-            id="author-image"
-            class="img-circle img-responsive"
-          />
+        <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4"><br /><br />
+          <img alt="Author Pic" src="../../assets/person.png" id="author-image" class="img-circle img-responsive" />
+          <div>Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly
+              Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         </div>
         <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
           <div class="container">
@@ -25,7 +19,7 @@
 
             <h4>Books written :</h4>
             <div *ngFor="let book of authorInfo.books">
-              <a href="http://localhost:4200/book/{{ book.isbn13 }}">{{
+              <a routerLink="/book/{{book.isbn13}}">{{
                 book.title
               }}</a>
             </div>
@@ -36,9 +30,6 @@
   </div>
 </div>
 
-<link
-  href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
-  rel="stylesheet"
-  id="bootstrap-css"
-/>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>

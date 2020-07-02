@@ -5,4 +5,5 @@ describe('ImagepreloadDirective', () => {
     const directive = new ImagepreloadDirective();
     expect(directive).toBeTruthy();
   });
+
 });

@@ -17,21 +17,12 @@ export class SearchComponent implements OnInit {
   top = 3;
   skip = 0;
 
-  constructor(private bookService: BookService) {}
+  constructor(private bookService: BookService) { }
 
   ngOnInit(): void {
     this.searchString = null;
     this.books = [];
   }
-
-  // searchBooks() {
-  //   this.bookService.getBookList(this.searchString).subscribe({
-  //     next: (books) => {
-  //       this.books = books;
-  //     },
-  //     error: (err) => (this.errors = err),
-  //   });
-  // }
 
   searchBooks() {
     this.bookService

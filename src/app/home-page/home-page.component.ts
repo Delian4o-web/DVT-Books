@@ -8,8 +8,6 @@ import { Author } from '../models/author';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
 })
-export class HomePageComponent implements OnInit {
-  constructor(public auth: AuthService) {}
-
-  ngOnInit(): void {}
+export class HomePageComponent {
+  constructor(public auth: AuthService) { }
 }

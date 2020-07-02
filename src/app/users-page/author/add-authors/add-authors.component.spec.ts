@@ -1,15 +1,20 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed , flush } from '@angular/core/testing';
 import { AddAuthorsComponent } from './add-authors.component';
 import { ReactiveFormsModule, FormBuilder, FormsModule } from '@angular/forms';
 import { Author } from 'src/app/models/author';
 import { AuthorService } from '../../../services/author.service';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { DebugElement } from '@angular/core';
 import { BrowserModule, By } from '@angular/platform-browser';
+import { authorsMock, singleAuthorMock } from 'src/app/utils/mockdata';
 
 class MockService {
   addAuthor(): Observable<Author[]> {
+    return {} as Observable<Author[]>;
+  }
+
+  getAllAuthors(): Observable<Author[]> {
     return {} as Observable<Author[]>;
   }
 }
@@ -17,8 +22,13 @@ class MockService {
 describe('AddAuthorsComponent', () => {
   let authorComponent: AddAuthorsComponent;
   let fixture: ComponentFixture<AddAuthorsComponent>;
+  let mockAuthorService;
 
   beforeEach(async(() => {
+    mockAuthorService = {
+      addAuthor: () => { }
+    };
+
     TestBed.configureTestingModule({
       declarations: [AddAuthorsComponent],
       imports: [
@@ -30,8 +40,8 @@ describe('AddAuthorsComponent', () => {
       providers: [
         {
           AuthorService,
-          useValue: MockService,
-        },
+          useValue: MockService, mockAuthorService,
+        }
       ],
     }).compileComponents();
 
@@ -47,36 +57,69 @@ describe('AddAuthorsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should make field required', () => {
-    const firstNameInput =
-      authorComponent.registerAuthorForm.controls.first_name;
+  it('should make fields required', () => {
+    const firstNameInput = authorComponent.form.controls.first_name;
+    const lastNameInput = authorComponent.form.controls.last_name;
     expect(firstNameInput.errors.required).toBeTruthy();
+    expect(lastNameInput.errors.required).toBeTruthy();
 
     firstNameInput.setValue('John');
+    lastNameInput.setValue('Doe');
     expect(firstNameInput.errors).toBeNull();
+    expect(lastNameInput.errors).toBeNull();
   });
 
   it('form should be invalid when empty', () => {
-    authorComponent.registerAuthorForm.controls.first_name.setValue('');
-    authorComponent.registerAuthorForm.controls.last_name.setValue('');
-    expect(authorComponent.registerAuthorForm.valid).toBeFalsy();
+    authorComponent.form.controls.first_name.setValue('');
+    authorComponent.form.controls.last_name.setValue('');
+    expect(authorComponent.form.valid).toBeFalsy();
   });
 
-  it('form valid when input is entered', () => {
+  it('should be valid when all required fields are provided', () => {
     const firstNameInput = authorComponent.registerFormControl.first_name;
     firstNameInput.setValue('Delyan');
 
     const lastNameInput = authorComponent.registerFormControl.last_name;
     lastNameInput.setValue('Georgiev');
 
-    expect(authorComponent.registerAuthorForm.valid).toBeTruthy();
+    expect(authorComponent.form.valid).toBeTruthy();
   });
 
-  it('should test input errors', () => {
-    const firstNameInput = authorComponent.registerFormControl.first_name;
-    expect(firstNameInput.errors.required).toBeTruthy();
+  it('should add an author', () => {
+    let author = new Author();
+    authorComponent.form.controls.first_name.setValue('John');
+    authorComponent.form.controls.last_name.setValue('Smith');
+    author = authorComponent.form.value;
 
-    firstNameInput.setValue('Delyan');
-    expect(firstNameInput.errors).toBeNull();
+    const spy = spyOn(mockAuthorService, 'addAuthor').and.returnValue(
+      of(author)
+    );
+
+    mockAuthorService.addAuthor();
+
+    const spyAuthor = spyOn(authorComponent, 'addAuthor').and.callThrough();
+
+    authorComponent.addAuthor();
+    fixture.detectChanges();
+    expect(author).toEqual(authorComponent.form.value);
+    expect(spyAuthor).toHaveBeenCalled();
+    expect(spy).toHaveBeenCalled();
   });
+
+  it('should call the onSubmit method on form submission', () => {
+    spyOn(authorComponent, 'onSubmit').and.callThrough();
+    fixture.debugElement.query(By.css('form')).triggerEventHandler('ngSubmit', null);
+    fixture.detectChanges();
+    expect(authorComponent.onSubmit).toHaveBeenCalled();
+  });
+
+
+  it('should test if a form is invalid', () => {
+    authorComponent.form.controls.about.setValue('about test');
+    fixture.debugElement.query(By.css('form')).triggerEventHandler('ngSubmit', null);
+    expect(authorComponent.form.valid).toBeFalse();
+    const spy = spyOn(authorComponent, 'addAuthor');
+    expect(spy).not.toHaveBeenCalled();
+  });
+
 });

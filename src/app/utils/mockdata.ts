@@ -1,3 +1,5 @@
+import { Book } from '../models/book';
+
 export const singleAuthorMock = {
   href: 'http://localhost:4201/Authors/45101208-7e41-4867-bf9a-7d9ce054d2f0',
   id: '45101208-7e41-4867-bf9a-7d9ce054d2f0',
@@ -11,7 +13,7 @@ export const singleAuthorMock = {
   books: [],
 };
 
-export const singleBookMock = {
+export const singleBookMock: Book = {
   isbn10: '0917769732',
   isbn13: '9788336270229',
   title: 'Angular',
@@ -24,7 +26,7 @@ export const singleBookMock = {
     name: 'Robert Cecil Martin',
   },
   publisher: 'Digital Publishing',
-  date_published: '2020-04-26T00:00:00+00:00',
+  date_published: new Date(),
   tags: [
     {
       id: 'Angular',

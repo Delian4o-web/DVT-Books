@@ -36,8 +36,6 @@ export class EditAuthorsComponent implements OnInit {
   }
 
   getAuthor() {
-    console.log(this.selectedGroup.id);
-
     this.authorService.getAuthor(this.selectedGroup.id).subscribe((x) => {
       this.chosenAuthor = x;
 

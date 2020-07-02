@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { AuthorService } from '../services/author.service';
 import { Author } from '../models/author';
 import { Book } from '../models/book';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-author-profile',
@@ -18,9 +17,8 @@ export class AuthorProfileComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private authorService: AuthorService,
-    private location: Location
-  ) {}
+    private authorService: AuthorService
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
@@ -30,9 +28,5 @@ export class AuthorProfileComponent implements OnInit {
     this.authorService.getAuthor(this.authorID).subscribe((x) => {
       this.authorInfo = x;
     });
-  }
-
-  backClicked() {
-    this.location.back();
   }
 }

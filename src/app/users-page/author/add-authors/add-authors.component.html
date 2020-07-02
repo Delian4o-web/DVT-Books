@@ -3,90 +3,47 @@
     <div class="col-md-8 mx-auto">
       <div class="card">
         <div class="card-body">
-          <form
-            class="form"
-            [formGroup]="registerAuthorForm"
-            (ngSubmit)="onSubmit()"
-          >
+          <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="form-group">
-              <label
-                i18n="
+              <label i18n="
                   Author Firstname Input|Words Author Firstname Input@@Words
-                  Author Firstname Input"
-                >Firstname : <b class="text-error">*</b></label
-              >
-              <input
-                type="text"
-                class="form-control"
-                formControlName="first_name"
-              />
-              <span
-                class="text-danger"
-                *ngIf="
+                  Author Firstname Input">First name : <b class="text-error">*</b></label>
+              <input type="text" class="form-control" formControlName="first_name" />
+              <span class="text-danger" *ngIf="
                   (registerFormControl.first_name.touched || submitted) &&
                   registerFormControl.first_name.errors?.required
-                "
-              >
-                Firstname is required!
+                ">
+                First name is required!
               </span>
             </div>
             <div class="form-group">
-              <label
-                i18n="
+              <label i18n="
                   Author Middlename Input|Words Author Middlename Input@@Words
-                  Author Middlename Input"
-                >Middlename :</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                formControlName="middle_names"
-              />
+                  Author Middlename Input">Middle name :</label>
+              <input type="text" class="form-control" formControlName="middle_names" />
             </div>
             <div class="form-group">
-              <label
-                i18n="
+              <label i18n="
                   Author Lastname Input|Words Author Lastname Input@@Words
-                  Author Lastname Input"
-                >Lastname : <b class="text-error">*</b></label
-              >
-              <input
-                type="text"
-                class="form-control"
-                formControlName="last_name"
-              />
-              <span
-                class="text-danger"
-                *ngIf="
+                  Author Lastname Input">Last name : <b class="text-error">*</b></label>
+              <input type="text" class="form-control" formControlName="last_name" />
+              <span class="text-danger" *ngIf="
                   (registerFormControl.last_name.touched || submitted) &&
                   registerFormControl.last_name.errors?.required
-                "
-              >
-                Lastname is required!
+                ">
+                Last name is required!
               </span>
             </div>
             <div class="form-group">
-              <label
-                i18n="
+              <label i18n="
                   Author About Input|Words Author About Input@@Words Author
-                  About Input"
-                >About the Author :</label
-              >
-              <textarea
-                class="form-control"
-                formControlName="about"
-                rows="6"
-              ></textarea>
+                  About Input">About the Author :</label>
+              <textarea class="form-control" formControlName="about" rows="6"></textarea>
             </div>
             <div class="form-group">
-              <button
-                i18n="
+              <button i18n="
                   Add Author Button|Words Add Author Button@@Words Add Author
-                  Button"
-                [disabled]="!registerAuthorForm.valid"
-                type="submit"
-                class="btn"
-              >
+                  Button" [disabled]="!form.valid" type="submit" class="btn">
                 Add Author
               </button>
             </div>

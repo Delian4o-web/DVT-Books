@@ -1,11 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { Observable } from 'rxjs';
 import { AddBooksComponent } from './add-books.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AuthorService } from 'src/app/services/author.service';
+import { Book } from 'src/app/models/book';
+import { booksMock, singleBookMock } from 'src/app/utils/mockdata';
+
+class MockService {
+  addBook(): Observable<Book[]> {
+    return {} as Observable<Book[]>;
+  }
+}
 
 describe('AddBooksComponent', () => {
   let component: AddBooksComponent;
@@ -39,4 +47,6 @@ describe('AddBooksComponent', () => {
 
     expect(spy).toHaveBeenCalled();
   });
+
+
 });

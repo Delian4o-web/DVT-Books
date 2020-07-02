@@ -2,15 +2,20 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { EditAuthorsComponent } from './edit-authors.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Author } from 'src/app/models/author';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, By } from '@angular/platform-browser';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AuthorService } from '../../../services/author.service';
+import { singleAuthorMock } from 'src/app/utils/mockdata';
 
 class MockService {
   updateAnAuthor(): Observable<Author> {
     return {} as Observable<Author>;
+  }
+
+  getAllAuthors(): Observable<Author[]> {
+    return {} as Observable<Author[]>;
   }
 }
 
@@ -18,8 +23,14 @@ describe('EditAuthorsComponent', () => {
   let component: EditAuthorsComponent;
   let fixture: ComponentFixture<EditAuthorsComponent>;
   let spy: any;
+  let mockAuthorService;
 
   beforeEach(async(() => {
+    mockAuthorService = {
+      getAuthor: () => { },
+      updateAuthor: () => { }
+    };
+
     TestBed.configureTestingModule({
       declarations: [EditAuthorsComponent],
       imports: [
@@ -31,7 +42,7 @@ describe('EditAuthorsComponent', () => {
       providers: [
         {
           AuthorService,
-          useValue: MockService,
+          useValue: mockAuthorService,
         },
       ],
     }).compileComponents();

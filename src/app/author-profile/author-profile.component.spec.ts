@@ -5,58 +5,51 @@ import {
   HttpClientTestingModule,
   HttpTestingController,
 } from '@angular/common/http/testing';
-import { of, Observable } from 'rxjs';
-import { AuthService } from 'src/app/services/auth.service';
 import { AuthorService } from 'src/app/services/author.service';
-import { ActivatedRoute } from '@angular/router';
 import { Author } from '../models/author';
-
-class MockService {
-  getAuthor(): Observable<Author> {
-    return {} as Observable<Author>;
-  }
-}
-
-class MockAuth {}
-
-class MockActivatedRoute {}
+import { singleAuthorMock } from '../utils/mockdata';
+import { of } from 'rxjs';
 
 describe('AuthorProfileComponent', () => {
   let component: AuthorProfileComponent;
   let fixture: ComponentFixture<AuthorProfileComponent>;
-  let service: MockService;
+  let httpTestingController: HttpTestingController;
+  let mockAuthorService;
 
   beforeEach(async(() => {
-    service = new MockService();
+    mockAuthorService = {
+      getAuthor: () => { }
+    };
 
     TestBed.configureTestingModule({
       declarations: [AuthorProfileComponent],
       imports: [HttpClientTestingModule, RouterTestingModule],
       providers: [
-        {
-          AuthService,
-          useValue: MockAuth,
-        },
-        {
-          AuthorService,
-          useValue: MockService,
-        },
-        {
-          provide: ActivatedRoute,
-          useValue: MockActivatedRoute,
-        },
+        { provide: AuthorService, useValue: mockAuthorService }
       ],
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AuthorProfileComponent);
+    component = fixture.componentInstance;
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AuthorProfileComponent);
+    httpTestingController = TestBed.inject(HttpTestingController);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
-  // it('should create the app', () => {
-  //   expect(component).toBeTruthy();
-  //   component.backClicked = () => {};
-  // });
+  it('should get an author', () => {
+    const spy = spyOn(mockAuthorService, 'getAuthor').and.returnValue(
+      of(singleAuthorMock)
+    );
+    component.ngOnInit();
+    fixture.detectChanges();
+    expect(component.authorInfo).toEqual(singleAuthorMock);
+    expect(spy.calls.any()).toEqual(true);
+  });
+
+
+
+
 });

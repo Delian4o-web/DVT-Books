@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Book } from '../models/book';
 import { BookService } from '../services/book.service';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-book-profile',
@@ -12,13 +11,11 @@ import { Location } from '@angular/common';
 export class BookProfileComponent implements OnInit {
   bookISBN: string;
   bookInfo: Book;
-  book: any;
 
   constructor(
     private route: ActivatedRoute,
-    private bookService: BookService,
-    private location: Location
-  ) {}
+    private bookService: BookService
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
@@ -28,13 +25,6 @@ export class BookProfileComponent implements OnInit {
     this.bookService.getBook(this.bookISBN).subscribe((x) => {
       this.bookInfo = x;
     });
-
-    this.bookService.getBookPicture(this.bookISBN).subscribe((x) => {
-      this.book = x;
-    });
-  }
-
-  backClicked() {
-    this.location.back();
   }
 }
+
