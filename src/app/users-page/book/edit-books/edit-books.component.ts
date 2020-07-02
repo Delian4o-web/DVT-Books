@@ -37,7 +37,7 @@ export class EditBooksComponent implements OnInit {
     public bookService: BookService,
     public authorService: AuthorService,
     public tagService: TagService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.updateBookForm = this.fb.group({
@@ -126,14 +126,14 @@ export class EditBooksComponent implements OnInit {
 
     this.bookISBNNumber = this.isbnNumber.value;
 
-    // this.bookService
-    //   .updateBook(this.bookISBNNumber, this.bookInfoUpdate)
-    //   .subscribe((x) => {
-    //     this.bookService.updateBookPicture(
-    //       this.bookISBNNumber,
-    //       this.selectedFile
-    //     );
-    //   });
+    this.bookService
+      .updateBook(this.bookISBNNumber, this.bookInfoUpdate)
+      .subscribe((x) => {
+        this.bookService.updateBookPicture(
+          this.bookISBNNumber,
+          this.selectedFile
+        );
+      });
 
     // alert(this.bookInfoUpdate.title + ' updated!');
     // window.location.reload();
@@ -141,7 +141,7 @@ export class EditBooksComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    if (this.updateBookForm.valid && this.previewUrl) {
+    if (this.updateBookForm.valid) {
       this.updateBook();
     }
   }

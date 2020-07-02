@@ -19,140 +19,135 @@
               </button>
             </div>
             <br />
-            <div class="parent">
-              <div class="vertical-column-1">
-                <div class="form-group">
-                  <label i18n="
+
+            <div>
+              <div class="form-group">
+                <label i18n="
                       Book ISBN10 Input|Words Book ISBN10 Input@@Words Book
                       ISBN10 Input">ISBN10 Number <b class="text-error">*</b>
-                  </label>
-                  <input type="text" class="form-control" formControlName="isbn10" maxlength="13" maxlength="13" />
+                </label>
+                <input type="text" class="form-control" formControlName="isbn10" maxlength="13" maxlength="13" />
 
-                  <span class="text-danger" *ngIf="
+                <span class="text-danger" *ngIf="
                       (registerFormControl.isbn10.touched || submitted) &&
                       registerFormControl.isbn10.errors?.required
                     ">
-                    ISBN-10 number is required!
-                  </span>
-                  <span class="text-danger" *ngIf="
+                  ISBN-10 number is required!
+                </span>
+                <span class="text-danger" *ngIf="
                       registerFormControl.isbn10.touched &&
                       registerFormControl.isbn10.errors?.pattern
                     ">
-                    Enter a valid ISBN-10 number!
-                  </span>
-                </div>
-                <br />
+                  Enter a valid ISBN-10 number!
+                </span>
+              </div>
+              <br />
 
-                <div class="form-group">
-                  <label i18n="
+              <div class="form-group">
+                <label i18n="
                       Book ISBN13 Input|Words Book ISBN13 Input@@Words Book
                       ISBN13 Input">ISBN 13 Number <b class="text-error">*</b>
-                  </label>
-                  <input type="text" class="form-control" formControlName="isbn13" />
-                  <span class="text-danger" *ngIf="
+                </label>
+                <input type="text" class="form-control" formControlName="isbn13" />
+                <span class="text-danger" *ngIf="
                       (registerFormControl.isbn13.touched || submitted) &&
                       registerFormControl.isbn13.errors?.required
                     ">
-                    ISBN-13 number is required!
-                  </span>
-                  <span class="text-danger" *ngIf="
+                  ISBN-13 number is required!
+                </span>
+                <span class="text-danger" *ngIf="
                       registerFormControl.isbn13.touched &&
                       registerFormControl.isbn13.errors?.pattern
                     ">
-                    Enter a valid ISBN-13 number!
-                  </span>
-                </div>
-                <br />
+                  Enter a valid ISBN-13 number!
+                </span>
+              </div>
+              <br />
 
-                <div class="form-group">
-                  <label i18n="
+              <div class="form-group">
+                <label i18n="
                       Book Title Input|Words Book Title Input@@Words Book Title
                       Input">Title <b class="text-error">*</b>
-                  </label>
-                  <input type="text" class="form-control" formControlName="title" />
-                  <span class="text-danger" *ngIf="
+                </label>
+                <input type="text" class="form-control" formControlName="title" />
+                <span class="text-danger" *ngIf="
                       (registerFormControl.title.touched || submitted) &&
                       registerFormControl.title.errors?.required
                     ">
-                    Title of the book is required!
-                  </span>
-                </div>
-                <br />
+                  Title of the book is required!
+                </span>
+              </div>
+              <br />
 
-                <div class="form-group">
-                  <label i18n="
+              <div class="form-group">
+                <label i18n="
                       Book Author Input|Words Book Author Input@@Words Book
                       Author Input">Author
-                  </label>
-                  <select class="form-control" formControlName="author">
-                    <option *ngFor="let author of authorsList" [value]="author.id">{{ author.name }}</option>
-                  </select>
-                </div>
-                <br />
+                </label>
+                <select class="form-control" formControlName="author">
+                  <option *ngFor="let author of authorsList" [value]="author.id">{{ author.name }}</option>
+                </select>
+              </div>
+              <br />
 
-                <div class="form-group">
-                  <label i18n="
+              <div class="form-group">
+                <label i18n="
                       Book Abstract Input|Words Book Abstract Input@@Words Book
                       Abstract Input">Abstract
-                  </label>
-                  <textarea class="form-control" formControlName="about" rows="11"></textarea>
-                </div>
-                <br />
+                </label>
+                <textarea class="form-control" formControlName="abstract" rows="11"></textarea>
               </div>
-              <div class="vertical-column-2">
-                <div class="form-group">
-                  <label i18n="
+              <br />
+            </div>
+            <div class="vertical-column-2">
+              <div class="form-group">
+                <label i18n="
                       Book Publisher Input|Words Book Publisher Input@@Words
                       Book Publisher Input">Publisher
-                  </label>
-                  <input type="text" class="form-control" formControlName="publisher" />
-                </div>
-                <br />
+                </label>
+                <input type="text" class="form-control" formControlName="publisher" />
+              </div>
+              <br />
 
-                <div class="form-group">
-                  <label i18n="
+              <div class="form-group">
+                <label i18n="
                       Book Date Published Input|Words Book Date Published
                       Input@@Words Book Date Published Input">Date Published
-                  </label>
-                  <input type="date" class="form-control" formControlName="date_published" />
-                </div>
-                <br />
+                </label>
+                <input type="date" class="form-control" formControlName="date_published" />
+              </div>
+              <br />
 
-                <div class="form-group tags-show">
-                  <label i18n="
+              <div class="form-group tags-show">
+                <label i18n="
                       Book Tags Input|Words Book Tags Input@@Words Book Tags
                       Input">Tags
-                  </label>
+                </label>
 
-                  <select class="form-control" formControlName="tags" size="5" multiple>
-                    <option *ngFor="let tag of tagsList" [value]="tag.id">{{
+                <select class="form-control" formControlName="tags" size="5" multiple>
+                  <option *ngFor="let tag of tagsList" [value]="tag.id">{{
                       tag.description
                     }}</option>
-                  </select>
-                </div>
-                <br />
+                </select>
+              </div>
+              <br />
 
-                <div class="form-group">
-                  <label i18n="
+              <div class="form-group">
+                <label i18n="
                       Book About Input|Words Book About Input@@Words Book About
                       Input">About
-                  </label>
-                  <textarea class="form-control" formControlName="about" rows="11"></textarea>
-                </div>
-                <br />
+                </label>
+                <textarea class="form-control" formControlName="about" rows="11"></textarea>
               </div>
-              <div class="button-submit-column">
-                <button i18n="
-                    Book Add Button|WordsBook Add Button@@Words Book Add Button" [disabled]="!registerBookForm.valid"
-                  type="submit" class="btn">
-                  Add Book
-                </button>
-                <hr />
-                <br />
-
-                <br />
-              </div>
+              <br />
             </div>
+            <button i18n="
+                    Book Add Button|WordsBook Add Button@@Words Book Add Button" [disabled]="!registerBookForm.valid"
+              type="submit" class="btn">
+              Add Book
+            </button>
+            <br />
+            <br />
           </form>
         </div>
       </div>

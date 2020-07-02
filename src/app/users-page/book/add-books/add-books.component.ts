@@ -35,7 +35,7 @@ export class AddBooksComponent implements OnInit {
     public bookService: BookService,
     public authorService: AuthorService,
     public tagService: TagService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.registerBookForm = this.fb.group({
@@ -112,12 +112,14 @@ export class AddBooksComponent implements OnInit {
 
     this.bookService.addBook(this.book).subscribe((x) => {
       this.bookService
-        .addBookPicture(this.bookISBNNumber, this.selectedFile, 3000)
+        .addBookPicture(this.bookISBNNumber, this.selectedFile, 4000)
         .subscribe();
     });
 
-    alert(this.bookTitle.value + ' added!');
-    window.location.reload();
+
+
+    // alert(this.bookTitle.value + ' added!');
+    // window.location.reload();
   }
 
   onSubmit() {
