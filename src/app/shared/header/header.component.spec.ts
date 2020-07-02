@@ -8,13 +8,11 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
-  let mockAuthService;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponent],
-      imports: [HttpClientTestingModule, RouterTestingModule],
-      providers: [{ AuthService, useValue: mockAuthService }]
+      imports: [HttpClientTestingModule, RouterTestingModule]
     }).compileComponents();
   }));
 

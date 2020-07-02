@@ -7,13 +7,11 @@ import { AuthService } from '../services/auth.service';
 describe('UsersPageComponent', () => {
   let component: UsersPageComponent;
   let fixture: ComponentFixture<UsersPageComponent>;
-  let mockAuthService;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [UsersPageComponent],
-      imports: [HttpClientTestingModule, RouterTestingModule],
-      providers: [{ AuthService, useValue: mockAuthService }]
+      imports: [HttpClientTestingModule, RouterTestingModule]
     }).compileComponents();
   }));
 
