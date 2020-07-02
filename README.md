@@ -51,7 +51,7 @@ An Book Management application where users will be able to search for books , vi
 
 ## Books Component (Desktop & Mobile View)
 
-![](/src/app/screenshots/Books Component.png)
+![](/src/app/screenshots/Books-Component.png)
 
 ![](/src/app/screenshots/Mobile-Books-Component.png)
 
