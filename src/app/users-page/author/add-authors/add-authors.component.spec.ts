@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed , flush } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, flush } from '@angular/core/testing';
 import { AddAuthorsComponent } from './add-authors.component';
 import { ReactiveFormsModule, FormBuilder, FormsModule } from '@angular/forms';
 import { Author } from 'src/app/models/author';
@@ -8,6 +8,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { DebugElement } from '@angular/core';
 import { BrowserModule, By } from '@angular/platform-browser';
 import { authorsMock, singleAuthorMock } from 'src/app/utils/mockdata';
+import { Book } from 'src/app/models/book';
 
 class MockService {
   addAuthor(): Observable<Author[]> {
@@ -23,10 +24,43 @@ describe('AddAuthorsComponent', () => {
   let authorComponent: AddAuthorsComponent;
   let fixture: ComponentFixture<AddAuthorsComponent>;
   let mockAuthorService;
+  let blob = new Blob([""], { type: 'text/html' });
+  blob["lastModifiedDate"] = "";
+  blob["name"] = "filename";
+
+  let fakeF = <File>blob;
+
+  const mockAuthor = [{
+    href: '324iuhjk',
+    id: 'fefer34',
+    first_name: 'John',
+    middle_names: 'Johnson',
+    last_name: 'Johnson',
+    name: 'John Johnson',
+    about: 'About the author',
+    version: '5E098NGH876',
+    books: [{
+      isbn10: '3454657657',
+      isbn13: '46456546',
+      title: 'Title',
+      about: 'Mock About',
+      abstract: 'Mock Abstract',
+      author: { href: 'string', id: 'string', name: 'string' },
+      publisher: 'Mock Publisher',
+      date_published: new Date(),
+      image: fakeF,
+      tags: [{
+        href: 'efe4545',
+        id: 'ty689',
+        description: 'Mock Description',
+      }]
+    }]
+  }];
 
   beforeEach(async(() => {
     mockAuthorService = {
-      addAuthor: () => { }
+      addAuthor: () => { },
+      getAllAuthors: () => { }
     };
 
     TestBed.configureTestingModule({
@@ -121,5 +155,5 @@ describe('AddAuthorsComponent', () => {
     const spy = spyOn(authorComponent, 'addAuthor');
     expect(spy).not.toHaveBeenCalled();
   });
-
 });
+
