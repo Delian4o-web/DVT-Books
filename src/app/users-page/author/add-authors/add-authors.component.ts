@@ -44,9 +44,8 @@ export class AddAuthorsComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    if (this.form.valid) {
-      this.addAuthor();
-      window.location.reload();
-    }
+    this.addAuthor();
+    window.location.reload();
+
   }
 }
