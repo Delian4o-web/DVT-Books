@@ -26,6 +26,7 @@ import { AuthorProfileComponent } from './author-profile/author-profile.componen
 import { ImagepreloadDirective } from './directives/imagepreload.directive';
 import { SearchComponent } from './users-page/search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ImagepreloadDirective,
     SearchComponent,
     PageNotFoundComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     HttpClientModule,
