@@ -2,4 +2,62 @@
 
 <app-welcome-page></app-welcome-page>
 
-<app-author></app-author>
+<ng-container *ngIf="auth.isAdmin == true">
+  <section class="service-section" id="services">
+    <div class="container">
+      <h3
+        i18n="
+          Users Page Services|Words Users Page Services@@Words Users Page
+          Services"
+      >
+        Services
+      </h3>
+
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="service-items">
+            <div class="icon">
+              <span class="fa fa-book" aria-hidden="true"></span>
+            </div>
+            <h4 style="text-align: center;">
+              <a href="http://localhost:4200/book">Books</a>
+            </h4>
+            <p
+              i18n="
+                Users Page Admin Describe Books|Words Users Page Admin Describe
+                Books@@Words Users Page Admin Describe Books"
+            >
+              Admin will be able to view all the books in the database , view a
+              specific book , as well as add books and edit already exisiting
+              books in the database.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="service-items">
+            <div class="icon">
+              <span class="fa fa-users" aria-hidden="true"></span>
+            </div>
+            <h4 style="text-align: center;">
+              <a href="http://localhost:4200/author"> Authors</a>
+            </h4>
+            <p
+              i18n="
+                Users Page Admin Describe authors|Words Users Page Admin
+                Describe authors@@Words Users Page Admin Describe authors"
+            >
+              Admin will be able to view all the authors in the database , view
+              a specific authors information , as well as add authors and edit
+              already exisiting authors in the database.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>
+
+<ng-container *ngIf="auth.isAdmin == false">
+  <app-search></app-search>
+</ng-container>

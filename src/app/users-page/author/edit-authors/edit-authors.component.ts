@@ -35,12 +35,16 @@ export class EditAuthorsComponent implements OnInit {
     });
   }
 
-  getVal() {
-    console.log(this.selectedGroup.id);
-
+  getAuthor() {
     this.authorService.getAuthor(this.selectedGroup.id).subscribe((x) => {
       this.chosenAuthor = x;
-      console.log(this.chosenAuthor);
+
+      this.updateAuthorForm.patchValue({
+        first_name: this.chosenAuthor.first_name,
+        middle_names: this.chosenAuthor.middle_names,
+        last_name: this.chosenAuthor.last_name,
+        about: this.chosenAuthor.about,
+      });
     });
   }
 

@@ -9,7 +9,7 @@ import { Author } from 'src/app/models/author';
   styleUrls: ['./add-authors.component.scss'],
 })
 export class AddAuthorsComponent implements OnInit {
-  registerAuthorForm: FormGroup;
+  form: FormGroup;
   submitted = false;
   author = new Author();
   authorsList: Author[];
@@ -18,10 +18,10 @@ export class AddAuthorsComponent implements OnInit {
   chosenAuthor: Author;
   authorID;
 
-  constructor(private fb: FormBuilder, public authorService: AuthorService) {}
+  constructor(private fb: FormBuilder, public authorService: AuthorService) { }
 
   ngOnInit() {
-    this.registerAuthorForm = this.fb.group({
+    this.form = this.fb.group({
       first_name: ['', Validators.required],
       middle_names: [''],
       last_name: ['', [Validators.required]],
@@ -34,20 +34,18 @@ export class AddAuthorsComponent implements OnInit {
   }
 
   get registerFormControl() {
-    return this.registerAuthorForm.controls;
+    return this.form.controls;
   }
 
   addAuthor() {
-    this.author = this.registerAuthorForm.value;
+    this.author = this.form.value;
     this.authorService.addAuthor(this.author).subscribe();
   }
 
   onSubmit() {
     this.submitted = true;
-    if (this.registerAuthorForm.valid) {
-      this.addAuthor();
-      alert('Author Added!');
-      window.location.reload();
-    }
+    this.addAuthor();
+    window.location.reload();
+
   }
 }

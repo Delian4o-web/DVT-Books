@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { NgSelectModule } from '@ng-select/ng-select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,11 +10,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HomePageComponent } from './home-page/home-page.component';
 import { UsersPageComponent } from './users-page/users-page.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './shared/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthorComponent } from './users-page/author/author.component';
 import { WelcomePageComponent } from './users-page/welcome-page/welcome-page.component';
-import { TestComponent } from './test/test.component';
 import { ViewAuthorsComponent } from './users-page/author/view-authors/view-authors.component';
 import { EditAuthorsComponent } from './users-page/author/edit-authors/edit-authors.component';
 import { AddAuthorsComponent } from './users-page/author/add-authors/add-authors.component';
@@ -24,6 +23,10 @@ import { EditBooksComponent } from './users-page/book/edit-books/edit-books.comp
 import { ViewBooksComponent } from './users-page/book/view-books/view-books.component';
 import { BookProfileComponent } from './book-profile/book-profile.component';
 import { AuthorProfileComponent } from './author-profile/author-profile.component';
+import { ImagepreloadDirective } from './directives/imagepreload.directive';
+import { SearchComponent } from './users-page/search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,6 @@ import { AuthorProfileComponent } from './author-profile/author-profile.componen
     HeaderComponent,
     AuthorComponent,
     WelcomePageComponent,
-    TestComponent,
     ViewAuthorsComponent,
     EditAuthorsComponent,
     AddAuthorsComponent,
@@ -43,13 +45,16 @@ import { AuthorProfileComponent } from './author-profile/author-profile.componen
     ViewBooksComponent,
     BookProfileComponent,
     AuthorProfileComponent,
+    ImagepreloadDirective,
+    SearchComponent,
+    PageNotFoundComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
-    NgSelectModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
@@ -58,4 +63,4 @@ import { AuthorProfileComponent } from './author-profile/author-profile.componen
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

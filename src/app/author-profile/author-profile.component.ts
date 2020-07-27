@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AuthorService } from '../services/author.service';
 import { Author } from '../models/author';
+import { Book } from '../models/book';
 
 @Component({
   selector: 'app-author-profile',
@@ -11,11 +12,13 @@ import { Author } from '../models/author';
 export class AuthorProfileComponent implements OnInit {
   authorID: string;
   authorInfo: Author = null;
+  books: Book[] = [];
+  bookISBN: string[];
 
   constructor(
     private route: ActivatedRoute,
     private authorService: AuthorService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {

@@ -1,5 +1,3 @@
-// tslint:disable:variable-name
-
 export class UserProfile {
   'http://localhost:4200/claims/role': string[];
   nickname: string;

@@ -27,13 +27,17 @@ export class EditBooksComponent implements OnInit {
   chosenBook: Book;
   selectedISBNNo: string;
   bookInfoUpdate: Book;
+  bookISBNNumber: string;
+  selectedFile: File;
+  previewUrl: any = null;
+  reader;
 
   constructor(
     private fb: FormBuilder,
     public bookService: BookService,
     public authorService: AuthorService,
     public tagService: TagService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.updateBookForm = this.fb.group({
@@ -66,6 +70,10 @@ export class EditBooksComponent implements OnInit {
     return this.updateBookForm.get('author');
   }
 
+  get isbnNumber(): AbstractControl {
+    return this.updateBookForm.get('isbn13');
+  }
+
   get tags(): AbstractControl {
     return this.updateBookForm.get('tags');
   }
@@ -79,7 +87,30 @@ export class EditBooksComponent implements OnInit {
 
     this.bookService.getBook(this.selectedISBNNo).subscribe((x) => {
       this.chosenBook = x;
+
+      this.updateBookForm.patchValue({
+        isbn10: this.chosenBook.isbn10,
+        isbn13: this.chosenBook.isbn13,
+        title: this.chosenBook.title,
+        about: this.chosenBook.about,
+        abstract: this.chosenBook.abstract,
+        publisher: this.chosenBook.publisher,
+        date_published: this.chosenBook.date_published,
+        author: this.authorsList.find(
+          (author) => author.id === this.chosenBook.author.id
+        ).id,
+      });
     });
+  }
+
+  onFileChanged(event) {
+    this.selectedFile = event.target.files[0];
+    this.reader = new FileReader();
+
+    this.reader.readAsDataURL(this.selectedFile);
+    this.reader.onload = (_event) => {
+      this.previewUrl = this.reader.result;
+    };
   }
 
   updateBook() {
@@ -91,9 +122,21 @@ export class EditBooksComponent implements OnInit {
       (x) => x.id === this.tags.value
     );
 
+    // this.bookInfoUpdate.image = this.previewUrl;
+
+    this.bookISBNNumber = this.isbnNumber.value;
+
     this.bookService
-      .updateBook(this.selectedISBNNo, this.bookInfoUpdate)
-      .subscribe();
+      .updateBook(this.bookISBNNumber, this.bookInfoUpdate)
+      .subscribe((x) => {
+        this.bookService.updateBookPicture(
+          this.bookISBNNumber,
+          this.selectedFile
+        );
+      });
+
+    // alert(this.bookInfoUpdate.title + ' updated!');
+    // window.location.reload();
   }
 
   onSubmit() {

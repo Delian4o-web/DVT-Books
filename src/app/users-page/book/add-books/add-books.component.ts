@@ -11,6 +11,7 @@ import { AuthorService } from 'src/app/services/author.service';
 import { Author } from 'src/app/models/author';
 import { TagService } from 'src/app/services/tag.service';
 import { Tag } from 'src/app/models/tag';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-add-books',
@@ -27,13 +28,14 @@ export class AddBooksComponent implements OnInit {
   tagsList: Tag[];
   selectedTags: { id: string; href: string; description: string }[] = [];
   selectedFile: File;
+  bookISBNNumber: string;
 
   constructor(
     private fb: FormBuilder,
     public bookService: BookService,
     public authorService: AuthorService,
     public tagService: TagService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.registerBookForm = this.fb.group({
@@ -86,12 +88,6 @@ export class AddBooksComponent implements OnInit {
     return this.registerBookForm.get('title');
   }
 
-  getVal() {
-    this.authorService.getAuthor(this.selectedGroup.id).subscribe((x) => {
-      this.chosenAuthor = x;
-    });
-  }
-
   get registerFormControl() {
     return this.registerBookForm.controls;
   }
@@ -103,17 +99,27 @@ export class AddBooksComponent implements OnInit {
   addBook() {
     this.book = this.registerBookForm.value;
     this.book.author = this.authorsList.find((x) => x.id === this.author.value);
-    this.selectedTags = [this.tagsList.find((x) => x.id === this.tags.value)];
-    this.book.tags = this.selectedTags;
+
+    for (let index = 0; index <= this.tags.value.length - 1; index++) {
+      const selected = this.tagsList.find(
+        (x) => x.id === this.tags.value[index]
+      );
+      this.selectedTags.push(selected);
+      this.book.tags = this.selectedTags;
+    }
+
+    this.bookISBNNumber = this.isbnNumber.value;
 
     this.bookService.addBook(this.book).subscribe((x) => {
       this.bookService
-        .addBookPicture(this.isbnNumber.value, this.selectedFile)
+        .addBookPicture(this.bookISBNNumber, this.selectedFile, 4000)
         .subscribe();
     });
 
-    alert(this.bookTitle.value + ' added!');
-    window.location.reload();
+
+
+    // alert(this.bookTitle.value + ' added!');
+    // window.location.reload();
   }
 
   onSubmit() {

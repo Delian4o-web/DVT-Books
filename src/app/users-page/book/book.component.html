@@ -1,87 +1,32 @@
+<app-header></app-header><br /><br />
+<app-welcome-page></app-welcome-page>
+
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item">
-    <a
-      class="nav-link active"
-      id="pills-add-tab"
-      data-toggle="pill"
-      href="#pills-add"
-      role="tab"
-      aria-controls="pills-add"
-      aria-selected="true"
-      ><span class="fa fa-book"></span> <span></span> Add a Book</a
-    >
+    <a i18n="Add Book Pill|Words Add Book Pill@@Words Add Book Pill" class="nav-link active" id="pills-add-tab"
+      data-toggle="pill" href="#pills-add" role="tab" aria-controls="pills-add" aria-selected="true"><span
+        class="fa fa-book"></span> <span></span> Add a Book</a>
   </li>
   <li class="nav-item">
-    <a
-      class="nav-link"
-      id="pills-update-tab"
-      data-toggle="pill"
-      href="#pills-update"
-      role="tab"
-      aria-controls="pills-update"
-      aria-selected="false"
-      ><span class="fa fa-edit"></span> <span></span> Update a Book</a
-    >
+    <a i18n="Update Book Pill|Words Update Book Pill@@Words Update Book Pill" class="nav-link" id="pills-update-tab"
+      data-toggle="pill" href="#pills-update" role="tab" aria-controls="pills-update" aria-selected="false"><span
+        class="fa fa-edit"></span> <span></span> Update a Book</a>
   </li>
   <li class="nav-item">
-    <a
-      class="nav-link"
-      id="pills-delete-tab"
-      data-toggle="pill"
-      href="#pills-delete"
-      role="tab"
-      aria-controls="pills-delete"
-      aria-selected="false"
-    >
-      <span class="fa fa-trash"></span> <span> </span> Delete a Book</a
-    >
-  </li>
-  <li class="nav-item">
-    <a
-      class="nav-link"
-      id="pills-view-tab"
-      data-toggle="pill"
-      href="#pills-view"
-      role="tab"
-      aria-controls="pills-view"
-      aria-selected="false"
-    >
-      <span class="fa fa-search"></span> <span></span> View Books</a
-    >
+    <a i18n="View Book Pill|Words View Book Pill@@Words View Book Pill" class="nav-link" id="pills-view-tab"
+      data-toggle="pill" href="#pills-view" role="tab" aria-controls="pills-view" aria-selected="false">
+      <span class="fa fa-search"></span> <span></span> View Books</a>
   </li>
 </ul>
 
 <div class="tab-content" id="pills-tabContent">
-  <div
-    class="tab-pane fade show active"
-    id="pills-add"
-    role="tabpanel"
-    aria-labelledby="pills-add-tab"
-  >
+  <div class="tab-pane fade show active" id="pills-add" role="tabpanel" aria-labelledby="pills-add-tab">
     <app-add-books></app-add-books>
   </div>
-  <div
-    class="tab-pane fade"
-    id="pills-update"
-    role="tabpanel"
-    aria-labelledby="pills-update-tab"
-  >
+  <div class="tab-pane fade" id="pills-update" role="tabpanel" aria-labelledby="pills-update-tab">
     <app-edit-books></app-edit-books>
   </div>
-  <div
-    class="tab-pane fade"
-    id="pills-delete"
-    role="tabpanel"
-    aria-labelledby="pills-delete-tab"
-  >
-    Delete Books
-  </div>
-  <div
-    class="tab-pane fade"
-    id="pills-view"
-    role="tabpanel"
-    aria-labelledby="pills-view-tab"
-  >
+  <div class="tab-pane fade" id="pills-view" role="tabpanel" aria-labelledby="pills-view-tab">
     <app-view-books></app-view-books>
   </div>
 </div>

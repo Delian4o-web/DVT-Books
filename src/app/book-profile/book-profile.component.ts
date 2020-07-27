@@ -11,12 +11,11 @@ import { BookService } from '../services/book.service';
 export class BookProfileComponent implements OnInit {
   bookISBN: string;
   bookInfo: Book;
-  book: any;
 
   constructor(
     private route: ActivatedRoute,
     private bookService: BookService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
@@ -26,10 +25,6 @@ export class BookProfileComponent implements OnInit {
     this.bookService.getBook(this.bookISBN).subscribe((x) => {
       this.bookInfo = x;
     });
-
-    this.bookService.getBookPicture(this.bookISBN).subscribe((x) => {
-      this.book = x;
-      console.log(this.book);
-    });
   }
 }
+

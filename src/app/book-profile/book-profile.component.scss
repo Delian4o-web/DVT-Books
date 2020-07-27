@@ -2,6 +2,7 @@
 
 .container {
   font-family: $font-family-base;
+  padding-top: 70px;
 }
 
 .tags {
@@ -13,6 +14,10 @@
 
 .tags li {
   float: left;
+}
+
+.imgShow {
+  width: 350px;
 }
 
 .tag {
@@ -39,9 +44,23 @@
   top: 0;
 }
 
+button {
+  width: 20%;
+  color: white;
+  background-color: $blue;
+  border-color: $blue;
+}
+
 @media screen and (max-width: 600px) {
   .container,
   .tags > h1 {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -1,10 +1,14 @@
-<app-header></app-header><br /><br /><br /><br />
+<app-header></app-header>
 
 <div class="container">
   <h1 class="my-4">
     {{ bookInfo.title }}
-    <h5>
+    <h5 i18n="
+        Book Profile Written By|Words Book Profile Written By@@Words Book
+        Profile Written By">
       Written by :
+    </h5>
+    <h5>
       <a [routerLink]="['/author', bookInfo.author.id]">{{
         bookInfo.author.name
       }}</a>
@@ -13,11 +17,7 @@
 
   <div class="row">
     <div class="col-md-4">
-      <img
-        class="img-fluid imgShow"
-        src="https://kbimages1-a.akamaihd.net/0c98aac8-b577-4389-8ffb-b5f92cff1692/353/569/90/False/learn-java-12-programming.jpg"
-        alt=""
-      />
+      <img class="img-fluid imgShow" src="{{ bookInfo.image }}" default="../../assets/book.png" alt="" />
       <br /><br />
       <ul class="tags" *ngFor="let tag of bookInfo.tags">
         <li>
@@ -30,47 +30,28 @@
       <p class="text-left">
         {{ bookInfo.about }}
       </p>
-      <h3 class="my-3">Book Details :</h3>
+      <h3 i18n="
+          Book Details Heading|Words Book Details Heading@@Words Book Details
+          Heading" class="my-3">
+        Book Details :
+      </h3>
       <p class="text-left">
-        <b>Publisher : </b> {{ bookInfo.publisher }} <br />
+        <b i18n="
+            Publisher Heading|Words Publisher Heading@@Words Publisher Heading">Publisher :
+        </b>
+        {{ bookInfo.publisher }} <br />
         <br />
-        <b>Date Published : </b> {{ bookInfo.date_published | date }} <br />
+        <b i18n="
+            Date Published Heading|Words Date Published Heading@@Words Date
+            Published Heading">Date Published :
+        </b>
+        {{ bookInfo.date_published | date }} <br />
         <br />
         <b>ISBN-13 : </b> {{ bookInfo.isbn13 }} <br />
         <br />
         <b>ISBN-10 : </b> {{ bookInfo.isbn10 }} <br />
       </p>
       <br />
-    </div>
-  </div>
-  <p></p>
-
-  <!-- Related Projects -->
-  <h3 class="my-4">Related Books</h3>
-
-  <div class="row">
-    <div class="col-md-3 col-sm-6 mb-4">
-      <a href="#">
-        <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-6 mb-4">
-      <a href="#">
-        <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-6 mb-4">
-      <a href="#">
-        <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
-      </a>
-    </div>
-
-    <div class="col-md-3 col-sm-6 mb-4">
-      <a href="#">
-        <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
-      </a>
     </div>
   </div>
 </div>
